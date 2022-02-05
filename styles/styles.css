@@ -21,10 +21,13 @@ body {
   line-height: 21px;
   color: #000000;
   font-size: 18px;
-  text-align: center;
 }
 
 /*класс navigation-item-user не стилизую, т.к. он visiually-hidden и на его месте потом будут иконки и кнопка/ссылка*/
+
+.navigation ul {
+  text-align: center;
+}
 
 .navigation-link {
   font-family: "PT Sans", sans-serif;
@@ -39,6 +42,7 @@ body {
   font-family: "PT Sans", sans-serif;
   line-height: 36px;
   font-size: 30px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -47,6 +51,7 @@ body {
   line-height: 36px;
   color: #333333;
   font-size: 22px;
+  text-align: center;
 }
 
 .advantages-title {
@@ -54,17 +59,20 @@ body {
   line-height: 28px;
   font-weight: 700;
   font-size: 24px;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .advantages-number {
   font-family: "PT Sans", sans-serif;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .advantages-description {
   font-family: "PT Sans", sans-serif;
   color: #333333;
+  text-align: center;
 }
 
 .advantages-wrapper-blue {
@@ -81,6 +89,10 @@ body {
 
 .advantages-wrapper-dark-blue {
   background-color: #83B3D3;
+}
+
+.advantages-wrapper {
+  text-align: center;
 }
 
 /*Сдедующие три CSS-правила - можно ли так, или лучше не надо? А-то у меня по-другому не получилось, но, если нельзя, буду еще пробовать*/
@@ -102,9 +114,10 @@ color: #FFFFFF;
   line-height: 26px;
   color: #333333;
   font-size: 22px;
+  text-align: center;
 }
 
-.subscribe {
+.subscribe-wrapper {
   background-image: url("images/subscribe-background.jpg");
 }
 
@@ -113,6 +126,7 @@ color: #FFFFFF;
   line-height: 36px;
   color: #FFFFFF;
   font-size: 30px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -121,6 +135,7 @@ color: #FFFFFF;
   line-height: 26px;
   color: #FFFFFF;
   font-size: 20px;
+  text-align: center;
 }
 
 .footer-phone a {
@@ -128,6 +143,7 @@ color: #FFFFFF;
   line-height: 40px;
   color: #000000;
   font-size: 40px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
