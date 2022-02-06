@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -66,9 +67,10 @@
                   </div>
                 </li>
                 <li>
-                  <div class="advantages-wrapper advantages-wrapper-light-blue"></div>
+                  <div class="advantages-wrapper advantages-wrapper-light-blue">
                     <h3 class="advantages-title">Сувениры</h3>
                     <p class="advantages-description">Не только китайского, но и настоящего местного производства!</p>
+                  </div>
                 </li>
               </ul>
           </li>
@@ -106,18 +108,20 @@
         </ol>
       </section>
       <section class="hotel-search">
-        <h2 class="hotel-search-header">Заинтересовались?</h2>
+        <h2 class="main-title">Заинтересовались?</h2>
         <p class="hotel-search-parameters">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="button button-brown button-text-big hotel-search-button" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe">
-        <h2 class="subscribe-header">Подпишитесь на рассылку</h2>
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form" action="#" method="post">
-          <label for="subscribe-email" class="visually-hidden">Оставьте email</label>
-          <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
-          <button class="button button-blue subscribe-form-button" type="submit">Подписаться</button>
-        </form>
+        <div class="subscribe-wrapper">
+          <h2 class="subscribe-header">Подпишитесь на рассылку</h2>
+          <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="subscribe-form" action="#" method="post">
+            <label for="subscribe-email" class="visually-hidden">Оставьте email</label>
+            <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
+            <button class="button button-blue subscribe-form-button" type="submit">Подписаться</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -139,7 +143,11 @@
         </li>
       </ul>
       <p class="footer-phone"><a href="tel:+78128121212">+7 (812) 812-12-12</a></p>
-      <p class="htmlacademy-link"><a href="https://htmlacademy.ru/">.html academy</a></p>
+      <p class="htmlacademy-link">
+        <a href="https://htmlacademy.ru/">
+          <span class="visually-hidden">HTML-академия</span>
+        </a>
+      </p>
     </footer>
   </body>
 </html>

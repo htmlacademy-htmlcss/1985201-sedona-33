@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+  font-size: 18px;
+}
+
+/*класс navigation-item-user не стилизую, т.к. он visiually-hidden и на его месте потом будут иконки и кнопка/ссылка*/
+
+/*Навигация*/
+
+.navigation-list {
+  text-align: center;
+}
+
+.navigation-link {
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/*Главная страница, блок под центральным большим логотипом и заголовок "Заинтересовались?"*/
+
+.main-title {
+  line-height: 36px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-title-reasons {
+  line-height: 36px;
+  color: #333333;
+  font-size: 22px;
+  text-align: center;
+}
+
+/*Главная страница, центральный блок, 5 достоинств Седоны*/
+
+.advantages-wrapper {
+  text-align: center;
+}
+
+.advantages-title {
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.advantages-number {
+  text-transform: uppercase;
+}
+
+.advantages-description {
+  color: #333333;
+}
+
+.advantages-wrapper-blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-wrapper-light-blue {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-wrapper-white {
+  background-color:  #FFFFFF;
+}
+
+.advantages-wrapper-dark-blue {
+  background-color: #83B3D3;
+  color: #FFFFFF;
+}
+
+.advantages-wrapper-dark-blue .advantages-description {
+  color: #FFFFFF;
+}
+
+/*Главная страница, основной текст блока "Заинтересовались?"*/
+
+.hotel-search-parameters {
+  line-height: 26px;
+  color: #333333;
+  font-size: 22px;
+}
+
+.hotel-search {
+  text-align: center;
+}
+
+/*Главная страница, блок "Подпишитесь"*/
+
+.subscribe-wrapper {
+  background-image: url("../images/subscribe-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.subscribe-header {
+  line-height: 36px;
+  color: #FFFFFF;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.subscribe-description {
+  line-height: 26px;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+/*Футер*/
+
+.footer-phone a {
+  font-family: "PT Sans", "Arial", sans-serif;
+  line-height: 40px;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*Каталог, блок "Гостиницы Седоны"*/
+
+.sedona-hotels {
+  background-image: url("../images/sedona-hotels-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.main-catalog-title {
+  line-height: 78px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 60px;
+}
+
+.infrastructure-title, 
+.accomodation-title {
+  line-height: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+/*Каталог, найденные гостиницы*/
+
+.hotels-found {
+  line-height: 39px;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.hotel-title {
+  line-height: 31px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.accomodation-item, .accomodation-price {
+  line-height: 23px;
+  color: #333333;
+}
+
+.rating {
+  color: #333333;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Каталог, блок "Подпишитесь"*/
+
+.subscribe-wrapper-catalog {
+  text-align: center;
+}
+
+.subscribe-header-catalog {
+  line-height: 36px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscribe-description-catalog {
+  line-height: 26px;
+  color: #333333;
+  font-size: 20px;
+  text-align: center;
+}
