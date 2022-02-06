@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url(".../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,12 +10,12 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url(".../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
@@ -27,12 +27,12 @@ body {
 
 /*Навигация*/
 
-.navigation ul {
+.navigation-list {
   text-align: center;
 }
 
 .navigation-link {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
@@ -42,8 +42,7 @@ body {
 
 /*Главная страница, блок под центральным большим логотипом и заголовок "Заинтересовались?"*/
 
-.main-title, .hotel-search-header {
-  font-family: "PT Sans", sans-serif;
+.main-title {
   line-height: 36px;
   font-size: 30px;
   text-align: center;
@@ -51,7 +50,6 @@ body {
 }
 
 .main-title-reasons {
-  font-family: "PT Sans", sans-serif;
   line-height: 36px;
   color: #333333;
   font-size: 22px;
@@ -60,25 +58,23 @@ body {
 
 /*Главная страница, центральный блок, 5 достоинств Седоны*/
 
+.advantages-wrapper {
+  text-align: center;
+}
+
 .advantages-title {
-  font-family: "PT Sans", sans-serif;
   line-height: 28px;
   font-weight: 700;
   font-size: 24px;
-  text-align: center;
   text-transform: uppercase;
 }
 
 .advantages-number {
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
   text-transform: uppercase;
 }
 
 .advantages-description {
-  font-family: "PT Sans", sans-serif;
   color: #333333;
-  text-align: center;
 }
 
 .advantages-wrapper-blue {
@@ -97,31 +93,25 @@ body {
   background-color: #83B3D3;
 }
 
-.advantages-wrapper {
-  text-align: center;
-}
-
-/*Сдедующие три CSS-правила - можно ли так, или лучше не надо? А-то у меня по-другому не получилось, но, если нельзя, буду еще пробовать*/
-
-.advantages-wrapper-dark-blue .advantages-title {
+.advantages-wrapper-dark-blue {
 color: #FFFFFF;
 }
 
-.advantages-wrapper-dark-blue .advantages-number {
-  color: #FFFFFF;
-}
+/*Без этой не выходит - если её убрать, текст остаётся цвета 333333*/
 
 .advantages-wrapper-dark-blue .advantages-description {
   color: #FFFFFF;
-}
+}*/
 
 /*Главная страница, основной текст блока "Заинтересовались?"*/
 
 .hotel-search-parameters {
-  font-family: "PT Sans", sans-serif;
   line-height: 26px;
   color: #333333;
   font-size: 22px;
+}
+
+.hotel-search {
   text-align: center;
 }
 
@@ -131,29 +121,26 @@ color: #FFFFFF;
   background-image: url("../images/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .subscribe-header {
-  font-family: "PT Sans", sans-serif;
   line-height: 36px;
   color: #FFFFFF;
   font-size: 30px;
-  text-align: center;
   text-transform: uppercase;
 }
 
 .subscribe-description {
-  font-family: "PT Sans", sans-serif;
   line-height: 26px;
   color: #FFFFFF;
   font-size: 20px;
-  text-align: center;
 }
 
 /*Футер*/
 
 .footer-phone a {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   line-height: 40px;
   color: #000000;
   font-size: 40px;
@@ -171,7 +158,6 @@ color: #FFFFFF;
 }
 
 .main-catalog-title {
-  font-family: "PT Sans", sans-serif;
   line-height: 78px;
   font-weight: 700;
   color: #FFFFFF;
@@ -179,7 +165,6 @@ color: #FFFFFF;
 }
 
 .infrastructure-title, .accomodation-title {
-  font-family: "PT Sans", sans-serif;
   line-height: 26px;
   font-weight: 700;
   color: #FFFFFF;
@@ -189,7 +174,6 @@ color: #FFFFFF;
 /*Каталог, найденные гостиницы*/
 
 .hotels-found {
-  font-family: "PT Sans", sans-serif;
   line-height: 39px;
   font-weight: 700;
   font-size: 30px;
@@ -197,23 +181,17 @@ color: #FFFFFF;
 }
 
 .hotel-title {
-  font-family: "PT Sans", sans-serif;
   line-height: 31px;
   font-weight: 700;
   font-size: 24px;
 }
 
 .accomodation-item, .accomodation-price {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   line-height: 23px;
   color: #333333;
-  font-size: 18px;
 }
 
 .rating {
-  font-family: "PT Sans", sans-serif;
-  line-height: 21px;
   color: #333333;
   font-size: 16px;
   text-align: center;
@@ -222,17 +200,18 @@ color: #FFFFFF;
 
 /*Каталог, блок "Подпишитесь"*/
 
+.subscribe-wrapper-catalog {
+  text-align: center;
+}
+
 .subscribe-header-catalog {
-  font-family: "PT Sans", sans-serif;
   line-height: 36px;
-  color: #FFFFFF;
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .subscribe-description-catalog {
-  font-family: "PT Sans", sans-serif;
   line-height: 26px;
   color: #333333;
   font-size: 20px;
