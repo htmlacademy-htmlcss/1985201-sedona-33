@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(".../fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url(".../fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -32,7 +32,6 @@ body {
 }
 
 .navigation-link {
-  font-family: "PT Sans", "Arial", sans-serif;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
@@ -91,17 +90,12 @@ body {
 
 .advantages-wrapper-dark-blue {
   background-color: #83B3D3;
+  color: #FFFFFF;
 }
-
-.advantages-wrapper-dark-blue {
-color: #FFFFFF;
-}
-
-/*Без этой не выходит - если её убрать, текст остаётся цвета 333333*/
 
 .advantages-wrapper-dark-blue .advantages-description {
   color: #FFFFFF;
-}*/
+}
 
 /*Главная страница, основной текст блока "Заинтересовались?"*/
 
@@ -164,7 +158,8 @@ color: #FFFFFF;
   font-size: 60px;
 }
 
-.infrastructure-title, .accomodation-title {
+.infrastructure-title, 
+.accomodation-title {
   line-height: 26px;
   font-weight: 700;
   color: #FFFFFF;
