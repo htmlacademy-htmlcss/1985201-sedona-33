@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+  font-size: 18px;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+/*класс navigation-item-user не стилизую, т.к. он visiually-hidden и на его месте потом будут иконки и кнопка/ссылка*/
+
+/*Навигация*/
+
+.navigation {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.navigation-left {
+  width: 514px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 264px;
+  margin-left: auto;
+}
+
+.navigation-link {
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/*Главная страница*/
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+/*Главная страница, блок под центральным большим логотипом и заголовок "Заинтересовались?"*/
+
+.main-title {
+  width: 720px;
+  margin: 0 auto;
+  line-height: 36px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-title-reasons {
+  width: 720px;
+  margin: 0 auto;
+  line-height: 36px;
+  color: #333333;
+  font-size: 22px;
+  text-align: center;
+}
+
+/*Главная страница, центральный блок, 5 достоинств Седоны*/
+
+.advantages-chess {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
+.advantages-wrapper {
+  width: 400px;
+  text-align: center;
+}
+
+.advantages-title {
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.advantages-number {
+  text-transform: uppercase;
+}
+
+.advantages-description {
+  color: #333333;
+}
+
+.advantages-wrapper-blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-wrapper-light-blue {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-wrapper-white {
+  background-color:  #FFFFFF;
+}
+
+.advantages-wrapper-dark-blue {
+  background-color: #83B3D3;
+  color: #FFFFFF;
+}
+
+.advantages-wrapper-dark-blue .advantages-description {
+  color: #FFFFFF;
+}
+
+/*Главная страница, основной текст блока "Заинтересовались?"*/
+
+.hotel-search-parameters {
+  margin: 0 auto;
+  width: 720px;
+  line-height: 26px;
+  color: #333333;
+  font-size: 22px;
+  text-align: center;
+}
+
+.hotel-search {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*Главная страница, блок "Подпишитесь"*/
+
+.subscribe-wrapper {
+  background-image: url("../images/subscribe-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.subscribe-header {
+  margin: 0 auto;
+  width: 720px;
+  line-height: 36px;
+  color: #FFFFFF;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.subscribe-description {
+  margin: 0 auto;
+  width: 720px;
+  line-height: 26px;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+/*Футер*/
+.page-footer-wrapper {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  width: 107px;
+}
+
+.footer-phone a {
+  width: 720px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  line-height: 40px;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.htmlacademy-link {
+  width: 115px;
+  margin-left: auto;
+}
+
+/*Каталог, блоки "Гостиницы Седоны" и результаты*/
+
+.sedona-hotels {
+  display: flex;
+  width: 1200px;
+  background-image: url("../images/sedona-hotels-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.main-catalog-title {
+  width: 528px;
+  line-height: 78px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 60px;
+}
+
+.infrastructure-title, 
+.accomodation-title {
+  line-height: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.results-filters {
+display: flex;
+width: 1057px;
+}
+
+.results-buttons {
+  width: 160px;
+  margin-left: auto;
+}
+
+/*Каталог, найденные гостиницы*/
+
+.list-of-hotels {
+  display: flex;
+  flex-direction: row;
+}
+
+.hotels-found {
+  line-height: 39px;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.hotel-title {
+  line-height: 31px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.accomodation-item, .accomodation-price {
+  line-height: 23px;
+  color: #333333;
+}
+
+.rating {
+  color: #333333;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Пагинация*/
+
+.button-download-more {
+  width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  width: 1056px;
+}
+
+/*Каталог, блок "Подпишитесь"*/
+
+.subscribe-wrapper-catalog {
+  text-align: center;
+}
+
+.subscribe-header-catalog {
+  margin: 0 auto;
+  width: 720px;
+  line-height: 36px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscribe-description-catalog {
+  margin: 0 auto;
+  width: 720px;
+  line-height: 26px;
+  color: #333333;
+  font-size: 20px;
+  text-align: center;
+}
