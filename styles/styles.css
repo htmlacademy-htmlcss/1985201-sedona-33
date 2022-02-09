@@ -221,15 +221,18 @@ ol, ul {
   margin-left: auto;
 }
 
-/*Каталог, блок "Гостиницы Седоны"*/
+/*Каталог, блоки "Гостиницы Седоны" и результаты*/
 
 .sedona-hotels {
+  display: flex;
+  width: 1200px;
   background-image: url("../images/sedona-hotels-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .main-catalog-title {
+  width: 528px;
   line-height: 78px;
   font-weight: 700;
   color: #FFFFFF;
@@ -244,7 +247,22 @@ ol, ul {
   font-size: 20px;
 }
 
+.results-filters {
+display: flex;
+width: 1057px;
+}
+
+.results-buttons {
+  width: 160px;
+  margin-left: auto;
+}
+
 /*Каталог, найденные гостиницы*/
+
+.list-of-hotels {
+  display: flex;
+  flex-direction: row;
+}
 
 .hotels-found {
   line-height: 39px;
@@ -271,6 +289,19 @@ ol, ul {
   text-transform: uppercase;
 }
 
+/*Пагинация*/
+
+.button-download-more {
+  width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  width: 1056px;
+}
+
 /*Каталог, блок "Подпишитесь"*/
 
 .subscribe-wrapper-catalog {
@@ -278,6 +309,8 @@ ol, ul {
 }
 
 .subscribe-header-catalog {
+  margin: 0 auto;
+  width: 720px;
   line-height: 36px;
   font-size: 30px;
   text-align: center;
@@ -285,6 +318,8 @@ ol, ul {
 }
 
 .subscribe-description-catalog {
+  margin: 0 auto;
+  width: 720px;
   line-height: 26px;
   color: #333333;
   font-size: 20px;
