@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -23,12 +31,33 @@ body {
   font-size: 18px;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
 /*класс navigation-item-user не стилизую, т.к. он visiually-hidden и на его месте потом будут иконки и кнопка/ссылка*/
 
 /*Навигация*/
 
-.navigation-list {
-  text-align: center;
+.navigation {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.navigation-left {
+  width: 514px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 264px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -39,9 +68,23 @@ body {
   text-decoration: none;
 }
 
+/*Главная страница*/
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
 /*Главная страница, блок под центральным большим логотипом и заголовок "Заинтересовались?"*/
 
 .main-title {
+  width: 720px;
+  margin: 0 auto;
   line-height: 36px;
   font-size: 30px;
   text-align: center;
@@ -49,6 +92,8 @@ body {
 }
 
 .main-title-reasons {
+  width: 720px;
+  margin: 0 auto;
   line-height: 36px;
   color: #333333;
   font-size: 22px;
@@ -57,7 +102,17 @@ body {
 
 /*Главная страница, центральный блок, 5 достоинств Седоны*/
 
+.advantages-chess {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
 .advantages-wrapper {
+  width: 400px;
   text-align: center;
 }
 
@@ -100,12 +155,16 @@ body {
 /*Главная страница, основной текст блока "Заинтересовались?"*/
 
 .hotel-search-parameters {
+  margin: 0 auto;
+  width: 720px;
   line-height: 26px;
   color: #333333;
   font-size: 22px;
+  text-align: center;
 }
 
 .hotel-search {
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -119,6 +178,8 @@ body {
 }
 
 .subscribe-header {
+  margin: 0 auto;
+  width: 720px;
   line-height: 36px;
   color: #FFFFFF;
   font-size: 30px;
@@ -126,14 +187,26 @@ body {
 }
 
 .subscribe-description {
+  margin: 0 auto;
+  width: 720px;
   line-height: 26px;
   color: #FFFFFF;
   font-size: 20px;
 }
 
 /*Футер*/
+.page-footer-wrapper {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  width: 107px;
+}
 
 .footer-phone a {
+  width: 720px;
   font-family: "PT Sans", "Arial", sans-serif;
   line-height: 40px;
   color: #000000;
@@ -141,6 +214,11 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.htmlacademy-link {
+  width: 115px;
+  margin-left: auto;
 }
 
 /*Каталог, блок "Гостиницы Седоны"*/
