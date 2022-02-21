@@ -110,124 +110,126 @@
               </div>
             </div>
           </section> 
-          <section class="results-filters">
-            <h2 class="hotels-found">Найдено гостиниц: 38</h2>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешёвые</option>
-              <option value="expensive">Сначала дорогие</option>
-            </select>
-            <div class="results-buttons">
-              <a class="button button-show-as-cards button-show-current" href="#">
-                <span class="visually-hidden">Показать карточки</span>
-              </a>
-              <a class="button button-show-separately" href="#">
-                <span class="visually-hidden">Показать по отдельности</span>
-              </a>
-              <a class="button button-show-as-list" href="#">
-                <span class="visually-hidden">Показать список</span>
-              </a>
-            </div>
-          </section>
-          <section class="list-of-hotels"> 
-            <ul class="clear-list list-of-hotels-extradition">
-              <li>
-                <div class="hotel-card">
-                  <a class="hotel-link" href="#">
-                    <img class="picture" src="images/amara-resort-spa-hotel.jpg" alt="Отель Amara Resort & Spa">
-                    <h3 class="hotel-title">Amara Resort & Spa</h3>
-                  </a>
-                  <p class="accomodation-item">Гостиница</p>
-                  <p class="accomodation-price">От 4000 ₽</p>
-                  <a class="button button-brown button-show-more" href="#">Подробнее</a>
-                  <button class="button button-blue button-favorites" type="button">В избранное</button>
-                  <p class="visually-hidden">Рейтинг</p>
-                  <p class="rating">Рейтинг: 8,5</p>
-                </div>
-              </li>
-              <li>
-                <div class="hotel-card">
-                  <a class="hotel-link" href="#">
-                    <img class="picture" src="images/desert-quail-inn-hotel.jpg" alt="Отель Desert Quail Inn">
-                    <h3 class="hotel-title">Desert Quail Inn</h3>
-                  </a>
-                  <p class="accomodation-item">Гостиница</p>
-                  <p class="accomodation-price">От 3000 ₽</p>
-                  <a class="button button-brown button-show-more" href="#">Подробнее</a>
-                  <button class="button button-blue button-favorites" type="button">В избранное</button>
-                  <p class="visually-hidden">Рейтинг</p>
-                  <p class="rating">Рейтинг: 8,9</p>
-                </div>
-              </li>
-              <li>
-                <div class="hotel-card">
-                  <a class="hotel-link" href="#">
-                    <img class="picture" src="images/villas-at-poco-diablo-hotel.jpg" alt="Отель Villas at Poco Diablo">
-                    <h3 class="hotel-title">Villas at Poco Diablo</h3>
-                  </a>
-                  <p class="accomodation-item">Гостиница</p>
-                  <p class="accomodation-price">От 2000 ₽</p>
-                  <a class="button button-brown button-show-more" href="#">Подробнее</a>
-                  <button class="button button-green button-favorites" type="button">В избранном</button>
-                  <p class="visually-hidden">Рейтинг</p>
-                  <p class="rating">Рейтинг: 9,2</p>
-                </div>
-              </li>
-              <li>
-                <div class="hotel-card">
-                  <a class="hotel-link" href="#">
-                    <img class="picture" src="images/greentree-inn-hotel.jpg" alt="Отель GreenTree Inn">
-                    <h3 class="hotel-title">GreenTree Inn</h3>
-                  </a>
-                  <p class="accomodation-item">Гостиница</p>
-                  <p class="accomodation-price">От 3000 ₽</p>
-                  <a class="button button-brown button-show-more" href="#">Подробнее</a>
-                  <button class="button button-blue button-favorites" type="button">В избранное</button>
-                  <p class="visually-hidden">Рейтинг</p>
-                  <p class="rating">Рейтинг: 9,2</p>
-                </div>
-              </li>
-            </ul>  
-          </section>
-          <section> 
-            <div class="button-download-more-wrapper">
-              <button class="button button-blue button-text-big button-download-more" type="button">Загрузить ещё</button>
-            </div>
-            <div class="pagination-wrapper">
-              <h2 class="visually-hidden">Пагинация</h2>
-              <ul class="clear-list pagination">
-                <li class="pagination-item">
-                  <a class="button pagination-button pagination-current-button">1</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="button button-blue pagination-button" href="#">2</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="button button-blue pagination-button" href="#">3</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="button button-blue pagination-button" href="#">4</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="button button-blue pagination-button" href="#">...</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="button button-blue pagination-button" href="#">10</a>
-                </li>
-              </ul>
-              <!--Не понимаю, как облечь select в label ничего не сломав. Почитала теорию, если делать по аналогии с тем, как я делала выше,
-              у input есть следующие значения атрибута type: button,checkbox,file,hidden,image,password,radio,reset,submit,text, а select среди
-              этого перечня нет-->
-              <p class="hotels-to-show">Гостиниц на странице:</p>
-              <select class="select-hotels-to-show" aria-label="Количество">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4" selected>4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
+          <div class="catalog-content-wrap">
+            <section class="results-filters">
+              <h2 class="hotels-found">Найдено гостиниц: 38</h2>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
               </select>
-            </div>
-          </section>
+              <div class="results-buttons">
+                <a class="button-show button-show-as-cards button-show-current" href="#">
+                  <span class="visually-hidden">Показать карточки</span>
+                </a>
+                <a class="button-show button-show-separately" href="#">
+                  <span class="visually-hidden">Показать по отдельности</span>
+                </a>
+                <a class="button-show button-show-as-list" href="#">
+                  <span class="visually-hidden">Показать список</span>
+                </a>
+              </div>
+            </section>
+            <section class="list-of-hotels"> 
+              <ul class="clear-list list-of-hotels-extradition">
+                <li>
+                  <div class="hotel-card">
+                    <a class="hotel-link" href="#">
+                      <img class="picture" src="images/amara-resort-spa-hotel.jpg" alt="Отель Amara Resort & Spa">
+                      <h3 class="hotel-title">Amara Resort & Spa</h3>
+                    </a>
+                    <p class="accomodation-item">Гостиница</p>
+                    <p class="accomodation-price">От 4000 ₽</p>
+                    <a class="button button-brown button-show-more" href="#">Подробнее</a>
+                    <button class="button button-blue button-favorites" type="button">В избранное</button>
+                    <p class="visually-hidden">Рейтинг</p>
+                    <p class="rating">Рейтинг: 8,5</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="hotel-card">
+                    <a class="hotel-link" href="#">
+                      <img class="picture" src="images/desert-quail-inn-hotel.jpg" alt="Отель Desert Quail Inn">
+                      <h3 class="hotel-title">Desert Quail Inn</h3>
+                    </a>
+                    <p class="accomodation-item">Гостиница</p>
+                    <p class="accomodation-price">От 3000 ₽</p>
+                    <a class="button button-brown button-show-more" href="#">Подробнее</a>
+                    <button class="button button-blue button-favorites" type="button">В избранное</button>
+                    <p class="visually-hidden">Рейтинг</p>
+                    <p class="rating">Рейтинг: 8,9</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="hotel-card">
+                    <a class="hotel-link" href="#">
+                      <img class="picture" src="images/villas-at-poco-diablo-hotel.jpg" alt="Отель Villas at Poco Diablo">
+                      <h3 class="hotel-title">Villas at Poco Diablo</h3>
+                    </a>
+                    <p class="accomodation-item">Гостиница</p>
+                    <p class="accomodation-price">От 2000 ₽</p>
+                    <a class="button button-brown button-show-more" href="#">Подробнее</a>
+                    <button class="button button-green button-favorites" type="button">В избранном</button>
+                    <p class="visually-hidden">Рейтинг</p>
+                    <p class="rating">Рейтинг: 9,2</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="hotel-card">
+                    <a class="hotel-link" href="#">
+                      <img class="picture" src="images/greentree-inn-hotel.jpg" alt="Отель GreenTree Inn">
+                      <h3 class="hotel-title">GreenTree Inn</h3>
+                    </a>
+                    <p class="accomodation-item">Гостиница</p>
+                    <p class="accomodation-price">От 3000 ₽</p>
+                    <a class="button button-brown button-show-more" href="#">Подробнее</a>
+                    <button class="button button-blue button-favorites" type="button">В избранное</button>
+                    <p class="visually-hidden">Рейтинг</p>
+                    <p class="rating">Рейтинг: 9,2</p>
+                  </div>
+                </li>
+              </ul> 
+            </section>
+            <section> 
+              <div class="button-download-more-wrapper">
+                <button class="button button-blue button-text-big button-download-more" type="button">Загрузить ещё</button>
+              </div>
+              <div class="pagination-wrapper">
+                <h2 class="visually-hidden">Пагинация</h2>
+                <ul class="clear-list pagination">
+                  <li class="pagination-item">
+                    <a class="button pagination-button pagination-current-button">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="button button-blue pagination-button" href="#">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="button button-blue pagination-button" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="button button-blue pagination-button" href="#">4</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="button button-blue pagination-button" href="#">...</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="button button-blue pagination-button" href="#">10</a>
+                  </li>
+                </ul>
+                <!--Не понимаю, как облечь select в label ничего не сломав. Почитала теорию, если делать по аналогии с тем, как я делала выше,
+                у input есть следующие значения атрибута type: button,checkbox,file,hidden,image,password,radio,reset,submit,text, а select среди
+                этого перечня нет-->
+                <p class="hotels-to-show">Гостиниц на странице:</p>
+                <select class="select-hotels-to-show" aria-label="Количество">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4" selected>4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+            </section>
+          </div> 
           <section class="subscribe-catalog">
             <div class="subscribe-wrapper-catalog">
               <h2 class="subscribe-header-catalog">Подпишитесь на рассылку</h2>

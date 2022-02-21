@@ -104,11 +104,22 @@ body {
   width: 160px;
   border: 0;
   font-size: 18px;
-  line-height: 23px;
   font-weight: 400;
   color: #FFFFFF;
   background-color: transparent;
   margin-top: 20px;
+}
+
+.button-show {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.button-show-current {
+  border: 2px solid #000000;
 }
 
 .button-download-more {
@@ -157,10 +168,14 @@ body {
 
 .subscribe-form-button {
   width: 200px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   font-size: 20px;
   border-radius: 0px 10px 10px 0px;
+}
+
+.subscribe-catalog {
+  margin-bottom: 140px;
 }
 
 .button-brown {
@@ -205,6 +220,15 @@ body {
   color: #000000;
   font-size: 20px;
   text-decoration: none;
+}
+
+.navigation-search,
+.navigation-link-favorite {
+  display: inline-block;
+  width: 42px;
+  height: 66px;
+  border: 1px solid #000000;
+  padding: 0;
 }
 
 .logo-nav {
@@ -369,6 +393,7 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
+  padding-bottom: 93px;
 }
 
 .subscribe-header {
@@ -395,12 +420,20 @@ body {
 .subscribe-form {
   display: flex;
   justify-content: center;
-  padding-bottom: 93px;
 }
 
 #subscribe-email,
 .subscribe-form-button {
   border: 0;
+}
+
+#subscribe-email {
+  width: 600px;
+  height: 60px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #F2F2F2;
+  padding-left: 22px;
+  font-size: 18px;
 }
 
 /*Футер*/
@@ -451,6 +484,9 @@ body {
   background-repeat: no-repeat;
   margin-top: -5px;
   color: #FFFFFF;
+  padding-left: 71px;
+  padding-right: 71px;
+  padding-bottom: 83px;
 }
 
 .main-catalog-title {
@@ -459,14 +495,12 @@ body {
   font-weight: 700;
   font-size: 60px;
   margin: 0;
-  margin-left: 71px;
   padding-top: 35px;
   padding-bottom: 5px;
 }
 
 .breadcrumbs {
   display: flex;
-  margin-left: 71px;
   padding-bottom: 45px;
 }
 
@@ -489,51 +523,47 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  margin-right: 72px;
-}
-
-.infrastructure {
-  margin-left: 71px;
-  margin-bottom: 83px;
 }
 
 .accomodation {
   margin-left: 67px;
-  margin-bottom: 83px;
 }
 
 .results-filters {
   display: flex;
+  align-items: center;
+  margin-bottom: 53px;
 }
 
 .hotels-found {
-  line-height: 39px;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
-  margin-top: 50px;
-  margin-bottom: 56px;
-  margin-left: 71px;
+  margin: 0;
 }
 
 .select-control {
+  width: 247px;
+  height: 48px;
   margin-left: 192px;
 }
 
 .results-buttons {
-  width: 160px;
   margin-left: auto;
-  margin-right: 72px;
 }
 
 /*Каталог, найденные гостиницы*/
 
+.catalog-content-wrap {
+  padding-left: 72px;
+  padding-right: 72px;
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
 
 .list-of-hotels-extradition {
   display: flex;
   flex-wrap: wrap;
-  width: 1056px;
-  margin-left: 70px;
 }
 
 .list-of-hotels-extradition li {
@@ -581,10 +611,16 @@ body {
 }
 
 .rating {
+  width: 160px;
+  background-color: #F2F2F2;
   color: #333333;
   font-size: 16px;
-  text-align: end;
+  text-align: center;
   text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  margin-left: auto;
 }
 
 /*Пагинация*/
@@ -604,14 +640,12 @@ body {
 
 .pagination-wrapper {
   display: flex;
-  width: 1056px;
   margin: 0 auto;
   margin-top: 30px;
 }
 
 .pagination {
   display: flex;
-  margin-left: 72px;
 }
 
 .pagination-item {
@@ -619,20 +653,18 @@ body {
   text-align: center; 
 }
 
-/*Здесь стили ломаются, потому что не получается правильно сделать label в catalog.html*/
+/*Здесь стили ломаются, потому что не получается правильно сделать label в catalog.html, и я не понимаю, как его делать
+(возможно, момент дебильный, но я на нём сломалась)*/
 
 .hotels-to-show {
   margin-left: auto;
-}
-
-.select-hotels-to-show {
-  margin-right: 72px;
 }
 
 /*Каталог, блок "Подпишитесь"*/
 
 .subscribe-wrapper-catalog {
   text-align: center;
+  padding-top: 29px;
 }
 
 .subscribe-form-wrapper-catalog {
@@ -642,8 +674,7 @@ body {
 .subscribe-header-catalog {
   margin: 0 auto;
   width: 720px;
-  margin-top: 73px;
-  margin-bottom: 46px;
+  margin-bottom: 36px;
   line-height: 36px;
   font-size: 30px;
   text-align: center;
@@ -653,6 +684,7 @@ body {
 .subscribe-description-catalog {
   margin: 0 auto;
   width: 720px;
+  padding-top: 10px;
   margin-bottom: 46px;
   line-height: 26px;
   color: #333333;
