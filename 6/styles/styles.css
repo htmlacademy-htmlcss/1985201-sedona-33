@@ -19,15 +19,15 @@ html {
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 body {
   display: flex;
@@ -57,13 +57,143 @@ body {
   list-style-type: none;
 }
 
-/*класс navigation-item-user не стилизую, т.к. он visiually-hidden и на его месте потом будут иконки и кнопка/ссылка*/
+/*Кнопки*/
+
+.button {
+  font-family: PT Sans;
+  font-style: normal;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.navigation-link-button {
+  display: block;
+  width: 130px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  padding: 9px 15px;
+  margin-top: 13px;
+  margin-bottom: 19px;
+  border: 1px solid #000000;
+}
+
+.hotel-search-button {
+  display: block;
+  width: 575px;
+  font-size: 20px;
+  line-height: 36px;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+.apply-button {
+  width: 160px;
+  border: 0;
+  line-height: 21px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.sedona-hotels-reset-button {
+  width: 160px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.button-show {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.button-show-current {
+  border: 2px solid #000000;
+}
+
+.button-download-more {
+  width: 620px;
+  border: 0;
+  font-size: 20px;
+  line-height: 26px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.button-show-more {
+  display: inline-block;
+  text-decoration: none;
+  width: 133px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 22px;
+}
+
+.button-favorites {
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  width: 140px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pagination-button {
+  display: block;
+  width: 55px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-decoration: none;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.pagination-current-button {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.subscribe-form-button {
+  width: 200px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 20px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.subscribe-catalog {
+  margin-bottom: 140px;
+}
+
+.button-brown {
+  background-color: #756257;
+}
+
+.button-blue {
+  background-color: #83B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
 
 /*Навигация*/
 
 .navigation {
   display: flex;
-  margin: 0 auto;
 }
 
 .navigation-left {
@@ -92,6 +222,15 @@ body {
   text-decoration: none;
 }
 
+.navigation-search,
+.navigation-link-favorite {
+  display: inline-block;
+  width: 42px;
+  height: 66px;
+  border: 1px solid #000000;
+  padding: 0;
+}
+
 .logo-nav {
   margin-left: 70px;
   margin-right: 30px;
@@ -106,8 +245,6 @@ body {
 .logo {
   display: block;
   margin: 0 auto;
-  padding-top: 51px;
-  padding-bottom: 82px;
 }
 
 .welcome-page-background {
@@ -116,6 +253,8 @@ body {
   background-repeat: no-repeat;
   text-align: center;
   margin-top: -5px;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 /*Главная страница, блок под центральным большим логотипом и заголовок "Заинтересовались?"*/
@@ -127,9 +266,7 @@ body {
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 0;
-  padding-top: 63px;
-  padding-bottom: 31px;
+  padding-bottom: 21px;
 }
 
 .main-title-reasons {
@@ -139,40 +276,38 @@ body {
   color: #333333;
   font-size: 22px;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 80px;
+  padding-top: 10px;
 }
 
 /*Главная страница, центральный блок, 5 достоинств Седоны*/
 
+.advantages {
+  padding-top: 63px;
+}
+
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  margin-top: 80px;
 }
 
-.advantages-wrapper-row {
+/*Чтобы ты не подумал, что я невнимательно смотрела скринкаст - я смотрела внимательно. Но сделать "шахматы" в правильном 
+порядке у меня только вот так получилось, а это автоматически делает ячейку "шахмат" флексом. Видимо, я туплю, и не понимаю, 
+как сделать флекс-контейнер, чтобы все шло в правильном порядке, и без дивов, и без вот этого флекста, который к li относится*/
+
+.advantages-list li {
   display: flex;
-  height: 384px;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
 }
 
 .advantages-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
   text-align: center;
   width: 400px;
-  height: 384px;
 }
 
 .advantages-img {
-  margin: 0;
-  padding: 0;
   width: 800px;
+  height: 384px;
 }
 
 .advantages-title {
@@ -180,47 +315,45 @@ body {
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
-  margin: 0;
   margin-bottom: 30px;
-  padding: 0;
-}
-
-.advantages-details-title {
-  margin-bottom: 20px;
 }
 
 .advantages-number {
   text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.advantages-description {
-  margin: 0;
-  padding: 0;
 }
 
 .advantages-details-list {
-  margin: 0;
-  padding: 0;
   display: flex;
   color: #333333;
 }
 
+.advantages-description {
+  margin-top: 30px;
+}
+
 .advantages-wrapper-blue {
   background-color: rgba(131, 179, 211, 0.2);
+  padding-top: 109px;
+  padding-bottom: 109px;
 }
 
 .advantages-wrapper-light-blue {
   background-color: rgba(131, 179, 211, 0.12);
+  padding-top: 109px;
+  padding-bottom: 109px;
 }
 
 .advantages-wrapper-white {
   background-color:  #FFFFFF;
+  padding-top: 124px;
+  padding-bottom: 124px;
 }
 
 .advantages-wrapper-dark-blue {
   background-color: #83B3D3;
   color: #FFFFFF;
+  padding-top: 97px;
+  padding-bottom: 97px;
 }
 
 .advantages-wrapper-dark-blue .advantages-details-list {
@@ -228,6 +361,13 @@ body {
 }
 
 /*Главная страница, основной текст блока "Заинтересовались?"*/
+
+.hotel-search {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 91px;
+  margin-bottom: 93px;
+}
 
 .hotel-search-parameters {
   margin: 0 auto;
@@ -237,23 +377,13 @@ body {
   font-size: 22px;
   text-align: center;
 }
-
-.hotel-search {
-  margin: 0 auto;
-  text-align: center;
-}
-
 .main-title-interest {
-  padding-top: 91px;
-  padding-bottom: 29px;
+  padding-bottom: 19px;
 }
 
 .hotel-search-parameters {
-  padding-bottom: 56px;
-}
-
-.hotel-search-button-wrapper {
-  margin-bottom: 93px;
+  padding-top: 10px;
+  margin-bottom: 56px;
 }
 
 /*Главная страница, блок "Подпишитесь"*/
@@ -263,13 +393,13 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
-  margin: 0;
+  padding-bottom: 93px;
 }
 
 .subscribe-header {
   margin: 0 auto;
   padding-top: 94px;
-  padding-bottom: 29px;
+  padding-bottom: 19px;
   width: 720px;
   line-height: 36px;
   color: #FFFFFF;
@@ -279,15 +409,31 @@ body {
 
 .subscribe-description {
   margin: 0 auto;
-  padding-bottom: 46px;
+  padding-top: 10px;
+  margin-bottom: 46px;
   width: 720px;
   line-height: 26px;
   color: #FFFFFF;
   font-size: 20px;
 }
 
-.subscribe-form-wrapper {
-  padding-bottom: 94px;
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+}
+
+#subscribe-email,
+.subscribe-form-button {
+  border: 0;
+}
+
+#subscribe-email {
+  width: 600px;
+  height: 60px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #F2F2F2;
+  padding-left: 22px;
+  font-size: 18px;
 }
 
 /*Футер*/
@@ -323,7 +469,6 @@ body {
 .htmlacademy-link {
   display: block;
   width: 115px;
-  margin: 0;
   padding-left: 53px;
   margin-right: 72px;
   padding-top: 42px;
@@ -339,6 +484,9 @@ body {
   background-repeat: no-repeat;
   margin-top: -5px;
   color: #FFFFFF;
+  padding-left: 71px;
+  padding-right: 71px;
+  padding-bottom: 83px;
 }
 
 .main-catalog-title {
@@ -347,14 +495,12 @@ body {
   font-weight: 700;
   font-size: 60px;
   margin: 0;
-  margin-left: 71px;
   padding-top: 35px;
   padding-bottom: 5px;
 }
 
 .breadcrumbs {
   display: flex;
-  margin-left: 71px;
   padding-bottom: 45px;
 }
 
@@ -377,80 +523,104 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  margin-right: 72px;
-}
-
-.infrastructure {
-  margin-left: 71px;
-  margin-bottom: 83px;
 }
 
 .accomodation {
   margin-left: 67px;
-  margin-bottom: 83px;
 }
 
 .results-filters {
   display: flex;
+  align-items: center;
+  margin-bottom: 53px;
 }
 
 .hotels-found {
-  line-height: 39px;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
-  margin-top: 50px;
-  margin-bottom: 56px;
-  margin-left: 71px;
+  margin: 0;
 }
 
 .select-control {
+  width: 247px;
+  height: 48px;
   margin-left: 192px;
 }
 
 .results-buttons {
-  width: 160px;
   margin-left: auto;
-  margin-right: 72px;
 }
 
 /*Каталог, найденные гостиницы*/
 
+.catalog-content-wrap {
+  padding-left: 72px;
+  padding-right: 72px;
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+
 .list-of-hotels-extradition {
   display: flex;
   flex-wrap: wrap;
-  width: 1056px;
-  margin-left: 70px;
 }
 
 .list-of-hotels-extradition li {
-  width: 339px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 340px;
+  margin-right: 18px;
 }
 
-.list-of-hotels-extradition {
-  padding: 0;
+.list-of-hotels-extradition li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.hotel-card {
+  padding: 20px;
 }
 
 .picture {
-  width: 299px;
+  width: 300px;
 }
 
 .hotel-title {
   line-height: 31px;
   font-weight: 700;
   font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+
+/*не получается убрать зазор между картинкой и ссылкой-названием отеля*/
+
+.hotel-link {
+  display: block;
+  text-decoration: none;
+  color: #000000;
 }
 
 .accomodation-item, .accomodation-price {
+  display: inline-block;
   line-height: 23px;
   color: #333333;
+  width: 49%;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .rating {
+  width: 160px;
+  background-color: #F2F2F2;
   color: #333333;
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  margin-left: auto;
 }
 
 /*Пагинация*/
@@ -458,8 +628,8 @@ body {
 .button-download-more-wrapper {
   width: 100%;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .button-download-more {
@@ -470,53 +640,31 @@ body {
 
 .pagination-wrapper {
   display: flex;
-  width: 1056px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .pagination {
   display: flex;
-  margin-top: 30px;
-  margin-left: 72px;
-}
-
-.pagination-link {
-  display: block;
-  box-sizing: border-box;
-  align-items: center;
-  width: 55px;
-  height: 55px;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #83B3D3;
-  text-decoration: none;
 }
 
 .pagination-item {
-  padding-right: 8px;  
+  margin-right: 8px;  
   text-align: center; 
 }
 
-.pagination-current {
-  color: #000000;
-  background-color: #F2F2F2;
-}
-
-/*Здесь стили ломаются, потому что не получается правильно сделать label в catalog.html*/
+/*Здесь стили ломаются, потому что не получается правильно сделать label в catalog.html, и я не понимаю, как его делать
+(возможно, момент дебильный, но я на нём сломалась)*/
 
 .hotels-to-show {
-  margin-top: 30px;
-  margin-left: 299px;
-}
-
-.select-hotels-to-show {
-  margin-right: 72px;
+  margin-left: auto;
 }
 
 /*Каталог, блок "Подпишитесь"*/
 
 .subscribe-wrapper-catalog {
   text-align: center;
+  padding-top: 29px;
 }
 
 .subscribe-form-wrapper-catalog {
@@ -526,8 +674,7 @@ body {
 .subscribe-header-catalog {
   margin: 0 auto;
   width: 720px;
-  margin-top: 73px;
-  margin-bottom: 46px;
+  margin-bottom: 36px;
   line-height: 36px;
   font-size: 30px;
   text-align: center;
@@ -537,6 +684,7 @@ body {
 .subscribe-description-catalog {
   margin: 0 auto;
   width: 720px;
+  padding-top: 10px;
   margin-bottom: 46px;
   line-height: 26px;
   color: #333333;
