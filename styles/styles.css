@@ -64,29 +64,26 @@ body {
   font-style: normal;
   color: #FFFFFF;
   text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .navigation-link-button {
   display: block;
   width: 130px;
-  height: 20px;
-  font-weight: 700;
-  font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
   padding: 9px 15px;
   margin-top: 13px;
   margin-bottom: 19px;
-  border-radius: 4px;
   border: 1px solid #000000;
 }
 
 .hotel-search-button {
   display: block;
   width: 575px;
-  height: 30px;
-  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
@@ -95,12 +92,87 @@ body {
   border-radius: 10px;
 }
 
+.apply-button {
+  width: 160px;
+  border: 0;
+  line-height: 21px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.sedona-hotels-reset-button {
+  width: 160px;
+  border: 0;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.button-download-more {
+  width: 620px;
+  border: 0;
+  font-size: 20px;
+  line-height: 26px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.button-show-more {
+  display: inline-block;
+  text-decoration: none;
+  width: 133px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 22px;
+}
+
+.button-favorites {
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  width: 140px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pagination-button {
+  display: block;
+  width: 55px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-decoration: none;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.pagination-current-button {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.subscribe-form-button {
+  width: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  border-radius: 0px 10px 10px 0px;
+}
+
 .button-brown {
   background-color: #756257;
 }
 
 .button-blue {
   background-color: #83B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
 }
 
 /*Навигация*/
@@ -456,6 +528,7 @@ body {
 
 /*Каталог, найденные гостиницы*/
 
+
 .list-of-hotels-extradition {
   display: flex;
   flex-wrap: wrap;
@@ -464,32 +537,53 @@ body {
 }
 
 .list-of-hotels-extradition li {
-  width: 339px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 340px;
+  margin-right: 18px;
 }
 
-.list-of-hotels-extradition {
-  padding: 0;
+.list-of-hotels-extradition li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.hotel-card {
+  padding: 20px;
 }
 
 .picture {
-  width: 299px;
+  width: 300px;
 }
 
 .hotel-title {
   line-height: 31px;
   font-weight: 700;
   font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+
+/*не получается убрать зазор между картинкой и ссылкой-названием отеля*/
+
+.hotel-link {
+  display: block;
+  text-decoration: none;
+  color: #000000;
 }
 
 .accomodation-item, .accomodation-price {
+  display: inline-block;
   line-height: 23px;
   color: #333333;
+  width: 49%;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .rating {
   color: #333333;
   font-size: 16px;
-  text-align: center;
+  text-align: end;
   text-transform: uppercase;
 }
 
@@ -498,8 +592,8 @@ body {
 .button-download-more-wrapper {
   width: 100%;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .button-download-more {
@@ -512,41 +606,23 @@ body {
   display: flex;
   width: 1056px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .pagination {
   display: flex;
-  margin-top: 30px;
   margin-left: 72px;
 }
 
-.pagination-link {
-  display: block;
-  box-sizing: border-box;
-  align-items: center;
-  width: 55px;
-  height: 55px;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #83B3D3;
-  text-decoration: none;
-}
-
 .pagination-item {
-  padding-right: 8px;  
+  margin-right: 8px;  
   text-align: center; 
-}
-
-.pagination-current {
-  color: #000000;
-  background-color: #F2F2F2;
 }
 
 /*Здесь стили ломаются, потому что не получается правильно сделать label в catalog.html*/
 
 .hotels-to-show {
-  margin-top: 30px;
-  margin-left: 299px;
+  margin-left: auto;
 }
 
 .select-hotels-to-show {
