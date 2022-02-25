@@ -291,10 +291,6 @@ body {
   margin-top: 80px;
 }
 
-/*Чтобы ты не подумал, что я невнимательно смотрела скринкаст - я смотрела внимательно. Но сделать "шахматы" в правильном 
-порядке у меня только вот так получилось, а это автоматически делает ячейку "шахмат" флексом. Видимо, я туплю, и не понимаю, 
-как сделать флекс-контейнер, чтобы все шло в правильном порядке, и без дивов, и без вот этого флекста, который к li относится*/
-
 .advantages-list li {
   display: flex;
   flex-wrap: wrap;
@@ -562,19 +558,9 @@ body {
 }
 
 .list-of-hotels-extradition {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.list-of-hotels-extradition li {
-  display: flex;
-  flex-wrap: wrap;
-  width: 340px;
-  margin-right: 18px;
-}
-
-.list-of-hotels-extradition li:nth-child(3n) {
-  margin-right: 0;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 340px 340px 340px;
 }
 
 .hotel-card {
@@ -582,6 +568,7 @@ body {
 }
 
 .picture {
+  display: block;
   width: 300px;
 }
 
@@ -653,11 +640,26 @@ body {
   text-align: center; 
 }
 
-/*Здесь стили ломаются, потому что не получается правильно сделать label в catalog.html, и я не понимаю, как его делать
-(возможно, момент дебильный, но я на нём сломалась)*/
+.hotels-to-show-group {
+  margin-left: auto;
+}
 
 .hotels-to-show {
-  margin-left: auto;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+  margin-right: 51px;
+}
+
+.select-hotels-to-show {
+  width: 160px;
+  height: 48px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+  padding-left: 17px;
 }
 
 /*Каталог, блок "Подпишитесь"*/

@@ -215,18 +215,17 @@
                     <a class="button button-blue pagination-button" href="#">10</a>
                   </li>
                 </ul>
-                <!--Не понимаю, как облечь select в label ничего не сломав. Почитала теорию, если делать по аналогии с тем, как я делала выше,
-                у input есть следующие значения атрибута type: button,checkbox,file,hidden,image,password,radio,reset,submit,text, а select среди
-                этого перечня нет-->
-                <p class="hotels-to-show">Гостиниц на странице:</p>
-                <select class="select-hotels-to-show" aria-label="Количество">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4" selected>4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                </select>
+                <label class="hotels-to-show-group">
+                  <span class="hotels-to-show">Гостиниц на странице:</span>
+                  <select class="select-hotels-to-show" aria-label="Количество">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </label>
               </div>
             </section>
           </div> 
