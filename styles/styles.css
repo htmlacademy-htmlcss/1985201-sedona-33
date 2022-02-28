@@ -60,6 +60,7 @@ body {
 /*Кнопки*/
 
 .button {
+  display: inline-block;
   font-family: PT Sans;
   font-style: normal;
   color: #FFFFFF;
@@ -67,6 +68,7 @@ body {
   font-weight: 700;
   border-radius: 4px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .navigation-link-button {
@@ -78,6 +80,7 @@ body {
   padding: 9px 15px;
   margin-top: 13px;
   margin-bottom: 19px;
+  margin-left: 20px;
   border: 1px solid #000000;
 }
 
@@ -108,6 +111,7 @@ body {
   color: #FFFFFF;
   background-color: transparent;
   margin-top: 20px;
+  text-transform: none;
 }
 
 .button-show {
@@ -222,13 +226,29 @@ body {
   text-decoration: none;
 }
 
-.navigation-search,
-.navigation-link-favorite {
+.navigation-user-link {
+  position: relative;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.green-circle {
   display: inline-block;
-  width: 42px;
-  height: 66px;
-  border: 1px solid #000000;
-  padding: 0;
+  position: absolute;
+  left: 24px;
+  top: 15px;
+  width: 20px;
+  background-color: #7DB54F;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2.5px;
+  padding-bottom: 4.5px;
 }
 
 .logo-nav {
@@ -248,13 +268,21 @@ body {
 }
 
 .welcome-page-background {
-  background-image: url("../images/welcome-background.jpg");
+  background-image: url("../images/welcome-background-decoration.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  text-align: center;
+  background-position: bottom;
   margin-top: -5px;
   padding-top: 51px;
   padding-bottom: 82px;
+}
+
+.welcome-page-background-decoration {
+  position: relative;
+  background-image: url('../images/welcome-background.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*Главная страница, блок под центральным большим логотипом и заголовок "Заинтересовались?"*/
@@ -307,11 +335,12 @@ body {
 }
 
 .advantages-title {
+  margin: 0;
+  margin-bottom: 30px;
   line-height: 28px;
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 
 .advantages-number {
@@ -324,6 +353,7 @@ body {
 }
 
 .advantages-description {
+  margin: 0;
   margin-top: 30px;
 }
 
@@ -335,25 +365,48 @@ body {
 
 .advantages-wrapper-light-blue {
   background-color: rgba(131, 179, 211, 0.12);
-  padding-top: 109px;
-  padding-bottom: 109px;
+  padding-top: 184px;
+  padding-bottom: 79px;
 }
 
 .advantages-wrapper-white {
   background-color:  #FFFFFF;
-  padding-top: 124px;
-  padding-bottom: 124px;
+  padding-top: 184px;
+  padding-bottom: 79px;
 }
 
 .advantages-wrapper-dark-blue {
   background-color: #83B3D3;
   color: #FFFFFF;
   padding-top: 97px;
-  padding-bottom: 97px;
+  padding-bottom: 87px;
 }
 
 .advantages-wrapper-dark-blue .advantages-details-list {
   color: #FFFFFF;
+}
+
+.advantages-housing {
+  background-image: url("../images/icons/house-illustration.svg");
+  background-repeat: no-repeat;
+  background-position: top 89px left 163px;
+}
+
+.advantages-food {
+  background-image: url("../images/icons/hamburger-illustration.svg");
+  background-repeat: no-repeat;
+  background-position: top 91px left 163px;
+}
+
+.advantages-souvenirs {
+  background-image: url("../images/icons/gift-illustration.svg");
+  background-repeat: no-repeat;
+  background-position: top 85px left 168px;
+}
+
+.advantages-wrapper-text-top {
+  padding-top: 98px;
+  padding-bottom: 108px;
 }
 
 /*Главная страница, основной текст блока "Заинтересовались?"*/
@@ -418,12 +471,12 @@ body {
   justify-content: center;
 }
 
-#subscribe-email,
+.subsctibe-email-input,
 .subscribe-form-button {
   border: 0;
 }
 
-#subscribe-email {
+.subsctibe-email-input {
   width: 600px;
   height: 60px;
   border-radius: 10px 0px 0px 10px;
@@ -437,14 +490,23 @@ body {
   display: flex;
 }
 
+.footer-phone {
+  margin: 0;
+}
+
 .footer-social-list {
   display: flex;
-  width: 107px;
+  padding-top: 49px;
+  padding-bottom: 53px;
   margin-left: 72px;
 }
 
-.footer-phone {
-  margin: 0;
+.footer-social-list li {
+  margin-right: 30px;
+}
+
+.footer-social-item:nth-of-type(3n) {
+  margin-right: 0;
 }
 
 .footer-phone a {
