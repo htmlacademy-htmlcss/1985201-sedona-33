@@ -69,15 +69,16 @@ body {
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  border: 0;
 }
 
 .navigation-link-button {
   display: block;
-  width: 130px;
+  box-sizing: border-box;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
-  padding: 9px 15px;
+  padding: 9px 30px;
   margin-top: 13px;
   margin-bottom: 19px;
   margin-left: 20px;
@@ -171,11 +172,29 @@ body {
 }
 
 .subscribe-form-button {
+  box-sizing: border-box;
   width: 200px;
   padding-top: 18px;
   padding-bottom: 18px;
   font-size: 20px;
   border-radius: 0px 10px 10px 0px;
+}
+
+.subscribe-form-button:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-form-button:focus {
+  box-sizing: border-box;
+  outline: none;
+  background-color: #68A2CA;
+  box-shadow: inset 0 0 0 3px #756257;
+}
+
+.subscribe-form-button:active {
+  background-color: #68A2CA;
+  box-shadow: inset 0 0 0 3px #68A2CA;
+  opacity: 0.3
 }
 
 .subscribe-catalog {
@@ -184,6 +203,24 @@ body {
 
 .button-brown {
   background-color: #756257;
+}
+
+.button-brown:hover {
+  background-color: #615048
+}
+
+.button-brown:focus {
+  outline: none;
+  background-color: #615048;
+  border: 1px solid #83B3D3;
+  box-shadow: inset 0 0 0 2px #83B3D3;
+}
+
+.button-brown:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756257;
+  border: 1px solid #756257;
+  box-shadow: inset 0 0 0 2px #756257;
 }
 
 .button-blue {
@@ -226,6 +263,36 @@ body {
   text-decoration: none;
 }
 
+/*
+Тут должно быть оформление для current ссылки, но я вообще не поняла, как его делать, и в вебинаре этому вообще времени не уделили.
+Очень много раз попробовала, даже по-другому, чеерез border-bottom, и ничего не получается всё-равно, не понимаю, почему 
+.navigation-link-current::before {
+  position: absolute;
+}
+*/
+
+.navigation-link:hover,
+.navigation-user-link:hover,
+.footer-phone-link:hover,
+.htmlacademy-link:hover {
+  color:#756257;
+}
+
+.navigation-link:focus,
+.navigation-user-link:focus,
+.footer-phone-link:focus,
+.htmlacademy-link:focus {
+  outline: none;
+  color:#756257;
+}
+
+.navigation-link:active,
+.navigation-user-link:active,
+.footer-phone-link:active,
+.htmlacademy-link:active {
+  color:rgba(117, 98, 87, 0.3);
+}
+
 .navigation-user-link {
   position: relative;
   padding-left: 12px;
@@ -249,6 +316,11 @@ body {
   text-align: center;
   padding-top: 2.5px;
   padding-bottom: 4.5px;
+}
+
+.green-circle:active {
+  opacity: 0.3;
+  background-color: #7DB54F;
 }
 
 .logo-nav {
@@ -485,9 +557,21 @@ body {
   font-size: 18px;
 }
 
+.subsctibe-email-input:hover {
+  background-color: #E6E6E6;
+}
+
+.subsctibe-email-input:focus {
+  background-color: #E6E6E6;
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+}
+
 /*Футер*/
 .page-footer {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .footer-phone {
@@ -496,42 +580,80 @@ body {
 
 .footer-social-list {
   display: flex;
-  padding-top: 49px;
-  padding-bottom: 53px;
+  padding-top: 40px;
   margin-left: 72px;
 }
 
-.footer-social-list li {
-  margin-right: 30px;
+.footer-social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #83B3D3;
 }
 
-.footer-social-item:nth-of-type(3n) {
-  margin-right: 0;
+.footer-social-twitter {
+  background-image: url("../images/social-icons/twitter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-facebook {
+  background-image: url("../images/social-icons/facebook-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-youtube {
+  background-image: url("../images/social-icons/youtube-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-link:hover {
+  color: #68A2CA;
+}
+
+.footer-social-link:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #68A2CA;
+  border-radius: 10px;
+  color: #68A2CA;
+}
+
+.footer-social-link:focus {
+  border: border-box;
+  outline: none;
+  box-shadow: inset 0 0 0 3px #68A2CA;
+  border-radius: 10px;
+  margin-right: 3px;
+  color: #68A2CA;
+}
+
+.footer-social-link:active {
+  color: #68A2CA;
+  box-shadow: inset 0 0 0 3px #FFFFFF;
+  opacity: 0.3;
 }
 
 .footer-phone a {
   display: block;
-  width: 720px;
-  margin-left: 61px;
   padding-top: 40px;
-  padding-bottom: 40px;
   font-family: "PT Sans", "Arial", sans-serif;
   line-height: 40px;
   color: #000000;
   font-size: 40px;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .htmlacademy-link {
   display: block;
+  align-self: end;
+  color: #000000;
   width: 115px;
-  padding-left: 53px;
-  margin-right: 72px;
   padding-top: 42px;
   padding-bottom: 44px;
-  align-self: center;
+  margin-right: 72px;
 }
 
 /*Каталог, блоки "Гостиницы Седоны" и результаты*/
