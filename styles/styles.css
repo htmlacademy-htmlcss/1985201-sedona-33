@@ -61,7 +61,7 @@ body {
 
 .button {
   display: inline-block;
-  font-family: PT Sans;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -70,6 +70,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: 0;
+  margin: 0;
 }
 
 .navigation-link-button {
@@ -194,7 +195,7 @@ body {
 .subscribe-form-button:active {
   background-color: #68A2CA;
   box-shadow: inset 0 0 0 3px #68A2CA;
-  opacity: 0.3
+  opacity: 0.3;
 }
 
 .subscribe-catalog {
@@ -261,21 +262,18 @@ body {
   color: #000000;
   font-size: 20px;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
-/*
-Тут должно быть оформление для current ссылки, но я вообще не поняла, как его делать, и в вебинаре этому вообще времени не уделили.
-Очень много раз попробовала, даже по-другому, чеерез border-bottom, и ничего не получается всё-равно, не понимаю, почему 
-.navigation-link-current::before {
-  position: absolute;
+.current {
+  border-bottom: 2px solid #756257;
 }
-*/
 
 .navigation-link:hover,
 .navigation-user-link:hover,
 .footer-phone-link:hover,
 .htmlacademy-link:hover {
-  color:#756257;
+  color: #756257;
 }
 
 .navigation-link:focus,
@@ -283,14 +281,14 @@ body {
 .footer-phone-link:focus,
 .htmlacademy-link:focus {
   outline: none;
-  color:#756257;
+  color: #756257;
 }
 
 .navigation-link:active,
 .navigation-user-link:active,
 .footer-phone-link:active,
 .htmlacademy-link:active {
-  color:rgba(117, 98, 87, 0.3);
+  color: rgba(117, 98, 87, 0.3);
 }
 
 .navigation-user-link {
@@ -314,8 +312,8 @@ body {
   color: #FFFFFF;
   border-radius: 10px;
   text-align: center;
-  padding-top: 2.5px;
-  padding-bottom: 4.5px;
+  padding-top: 2px;
+  padding-bottom: 4px;
 }
 
 .green-circle:active {
@@ -340,21 +338,13 @@ body {
 }
 
 .welcome-page-background {
-  background-image: url("../images/welcome-background-decoration.svg");
+  background-image: url("../images/welcome-background-decoration.svg"), url('../images/welcome-background.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: bottom;
-  margin-top: -5px;
+  margin-top: -9px;
   padding-top: 51px;
   padding-bottom: 82px;
-}
-
-.welcome-page-background-decoration {
-  position: relative;
-  background-image: url('../images/welcome-background.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /*Главная страница, блок под центральным большим логотипом и заголовок "Заинтересовались?"*/
@@ -442,7 +432,7 @@ body {
 }
 
 .advantages-wrapper-white {
-  background-color:  #FFFFFF;
+  background-color: #FFFFFF;
   padding-top: 184px;
   padding-bottom: 79px;
 }
@@ -461,19 +451,19 @@ body {
 .advantages-housing {
   background-image: url("../images/icons/house-illustration.svg");
   background-repeat: no-repeat;
-  background-position: top 89px left 163px;
+  background-position: 163px 89px;
 }
 
 .advantages-food {
   background-image: url("../images/icons/hamburger-illustration.svg");
   background-repeat: no-repeat;
-  background-position: top 91px left 163px;
+  background-position: 163px 91px;
 }
 
 .advantages-souvenirs {
   background-image: url("../images/icons/gift-illustration.svg");
   background-repeat: no-repeat;
-  background-position: top 85px left 168px;
+  background-position: 168px 85px;
 }
 
 .advantages-wrapper-text-top {
@@ -585,38 +575,27 @@ body {
 }
 
 .footer-social-link {
-  display: inline-block;
+  display: block;
   width: 40px;
   height: 40px;
   color: #83B3D3;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer-social-twitter {
   background-image: url("../images/social-icons/twitter-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .footer-social-facebook {
   background-image: url("../images/social-icons/facebook-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .footer-social-youtube {
   background-image: url("../images/social-icons/youtube-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .footer-social-link:hover {
-  color: #68A2CA;
-}
-
-.footer-social-link:focus {
-  outline: none;
-  box-shadow: inset 0 0 0 3px #68A2CA;
-  border-radius: 10px;
   color: #68A2CA;
 }
 
@@ -625,7 +604,6 @@ body {
   outline: none;
   box-shadow: inset 0 0 0 3px #68A2CA;
   border-radius: 10px;
-  margin-right: 3px;
   color: #68A2CA;
 }
 
@@ -702,6 +680,9 @@ body {
 .sedona-hotels-buttons {
   display: flex;
   flex-direction: column;
+}
+
+.sedona-hotels-buttons-form-wrapper {
   margin-left: auto;
 }
 
