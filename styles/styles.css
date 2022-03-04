@@ -45,6 +45,7 @@ body {
 .body-wrapper {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -83,7 +84,6 @@ body {
   margin-top: 13px;
   margin-bottom: 19px;
   margin-left: 20px;
-  border: 1px solid #000000;
 }
 
 .hotel-search-button {
@@ -105,15 +105,49 @@ body {
   padding-bottom: 16px;
 }
 
+.apply-button:hover {
+  background-color: #68A2CA;
+}
+
+.apply-button:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #FFFFFF;
+}
+
+.apply-button:active {
+  background-color: #68A2CA;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .sedona-hotels-reset-button {
-  width: 160px;
+  padding: 0;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  margin-left: 24px;
+  margin-right: 24px;
   border: 0;
   font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
   background-color: transparent;
-  margin-top: 20px;
+  margin-top: 16px;
   text-transform: none;
+}
+
+.sedona-hotels-reset-button:hover {
+  opacity: 0.6;
+}
+
+.sedona-hotels-reset-button:focus {
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+}
+
+.sedona-hotels-reset-button:active {
+  box-shadow: none;
+  opacity: 0.3;
 }
 
 .button-show {
@@ -122,10 +156,32 @@ body {
   height: 48px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
+  color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+.button-show:hover,
+.button-show:focus {
+  outline: none;
+  border: 2px solid #83B3D3;
+}
+
+.button-show:active, 
 .button-show-current {
   border: 2px solid #000000;
+}
+
+.button-show-as-cards {
+  background-image: url("../images/icons/show-as-a-tile.svg");
+}
+
+.button-show-separately {
+  background-image: url("../images/icons/show-as-a-slideshow.svg");
+}
+
+.button-show-as-list {
+  background-image: url("../images/icons/show-as-a-list.svg");
 }
 
 .button-download-more {
@@ -160,11 +216,13 @@ body {
   display: block;
   width: 55px;
   font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
   color: #ffffff;
   background-color: #83B3D3;
   text-decoration: none;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 14px;
+  padding-bottom: 15px;
 }
 
 .pagination-current-button {
@@ -181,21 +239,55 @@ body {
   border-radius: 0px 10px 10px 0px;
 }
 
-.subscribe-form-button:hover {
+.subscribe-form-button:hover,
+.pagination-button:hover,
+.button-download-more:hover,
+.button-favorites:hover {
   background-color: #68A2CA;
 }
 
-.subscribe-form-button:focus {
+.button-favorites:hover {
+  box-shadow: inset 0 0 0 1px #756257;
+}
+
+.button-green:hover {
+  box-shadow: none;
+  background-color: #6C9E42;
+}
+
+.subscribe-form-button:focus,
+.pagination-button:focus,
+.button-download-more:focus,
+.button-favorites:focus,
+.button-green:focus
+ {
   box-sizing: border-box;
   outline: none;
   background-color: #68A2CA;
   box-shadow: inset 0 0 0 3px #756257;
 }
 
-.subscribe-form-button:active {
+.button-green:focus {
+  background-color: #7DB54F;
+}
+
+.subscribe-form-button:active,
+.pagination-button:active,
+.button-download-more:active,
+.button-favorites:active,
+.button-green:active {
   background-color: #68A2CA;
   box-shadow: inset 0 0 0 3px #68A2CA;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-favorites:active {
+  box-shadow: inset 0 0 0 1px #756257;
+}
+
+.button-green:active {
+  box-shadow: none;
+  background-color: #7DB54F;
 }
 
 .subscribe-catalog {
@@ -213,15 +305,13 @@ body {
 .button-brown:focus {
   outline: none;
   background-color: #615048;
-  border: 1px solid #83B3D3;
-  box-shadow: inset 0 0 0 2px #83B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
 .button-brown:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756257;
-  border: 1px solid #756257;
-  box-shadow: inset 0 0 0 2px #756257;
+  box-shadow: inset 0 0 0 3px #756257;
 }
 
 .button-blue {
@@ -256,7 +346,9 @@ body {
 
 .navigation-link {
   display: block;
-  padding: 20px 17px;
+  padding: 20px 0px;
+  margin-left: 17px;
+  margin-right: 17px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
@@ -645,6 +737,7 @@ body {
   padding-left: 71px;
   padding-right: 71px;
   padding-bottom: 83px;
+  margin-top: -9px;
 }
 
 .main-catalog-title {
@@ -654,7 +747,6 @@ body {
   font-size: 60px;
   margin: 0;
   padding-top: 35px;
-  padding-bottom: 5px;
 }
 
 .breadcrumbs {
@@ -662,15 +754,64 @@ body {
   padding-bottom: 45px;
 }
 
+.breadcrumbs-link-home {
+  display: inline-block;
+  width: 28px;
+  height: 27px;
+  background-image: url("../images/icons/homepage-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 3px;
+  margin-left: -5px;
+}
+
+.breadcrumbs-link-home-hotels {
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 1px;
+  margin-left: 2px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 4px;
+}
+
+.breadcrumbs-link:active {
+  box-shadow: none;
+  opacity: 0.3;
+}
+
 .infrastructure-title, 
 .accomodation-title {
   line-height: 26px;
   font-weight: 700;
   font-size: 20px;
+  padding-bottom: 30px;
 }
 
-.select-control {
-  margin-left: 191px;
+.infrastructure,
+.accomodation {
+  padding: 0;
+  border: 0;
+}
+
+.infrastructure-list li,
+.accomodation-list li {
+  padding-bottom: 13px;
 }
 
 .sedona-hotels-forms {
@@ -704,9 +845,29 @@ body {
 }
 
 .select-control {
-  width: 247px;
+  width: 287px;
   height: 48px;
   margin-left: 192px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  padding-left: 19px;
+}
+
+.select-control:hover,
+.select-control:focus,
+.select-hotels-to-show:hover,
+.select-hotels-to-show:focus {
+  outline: none;
+  border: 2px solid #83B3D3;
+}
+
+.select-control:active,
+.select-hotels-to-show:active {
+  border: 2px solid #E6E6E6;
+  opacity: 0.3;
 }
 
 .results-buttons {
@@ -734,7 +895,21 @@ body {
 
 .picture {
   display: block;
+  border: 3px solid transparent;
   width: 300px;
+}
+
+.picture:hover {
+  opacity: 0.6;
+}
+
+/*Не работает border в этом селекторе, я не понимаю, почему*/
+.picture:focus {
+  border: 3px solid #83B3D3;
+}
+
+.picture:active {
+  opacity: 0.3;
 }
 
 .hotel-title {
@@ -782,6 +957,8 @@ body {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .button-download-more {
