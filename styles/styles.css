@@ -121,6 +121,7 @@ body {
 }
 
 .sedona-hotels-reset-button {
+  box-sizing: border-box;
   padding: 0;
   padding-top: 4px;
   padding-bottom: 5px;
@@ -140,7 +141,6 @@ body {
 }
 
 .sedona-hotels-reset-button:focus {
-  box-sizing: border-box;
   outline: none;
   box-shadow: inset 0 0 0 3px #83B3D3;
 }
@@ -164,12 +164,12 @@ body {
 .button-show:hover,
 .button-show:focus {
   outline: none;
-  border: 2px solid #83B3D3;
+  border-color: #83B3D3;
 }
 
 .button-show:active, 
 .button-show-current {
-  border: 2px solid #000000;
+  border-color: #000000;
 }
 
 .button-show-as-cards {
@@ -200,7 +200,6 @@ body {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 22px;
 }
 
 .button-favorites {
@@ -259,8 +258,7 @@ body {
 .pagination-button:focus,
 .button-download-more:focus,
 .button-favorites:focus,
-.button-green:focus
- {
+.button-green:focus {
   box-sizing: border-box;
   outline: none;
   background-color: #68A2CA;
@@ -361,6 +359,15 @@ body {
   border-bottom: 2px solid #756257;
 }
 
+.navigation-user-link {
+  position: relative;
+  margin: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .navigation-link:hover,
 .navigation-user-link:hover,
 .footer-phone-link:hover,
@@ -381,14 +388,6 @@ body {
 .footer-phone-link:active,
 .htmlacademy-link:active {
   color: rgba(117, 98, 87, 0.3);
-}
-
-.navigation-user-link {
-  position: relative;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .green-circle {
@@ -847,6 +846,8 @@ body {
 .select-control {
   width: 287px;
   height: 48px;
+  -webkit-appearance: none;
+  appearance: none;
   margin-left: 192px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
@@ -861,12 +862,12 @@ body {
 .select-hotels-to-show:hover,
 .select-hotels-to-show:focus {
   outline: none;
-  border: 2px solid #83B3D3;
+  border-color: #83B3D3;
 }
 
 .select-control:active,
 .select-hotels-to-show:active {
-  border: 2px solid #E6E6E6;
+  border-color: #E6E6E6;
   opacity: 0.3;
 }
 
@@ -893,23 +894,30 @@ body {
   padding: 20px;
 }
 
-.picture {
-  display: block;
-  border: 3px solid transparent;
-  width: 300px;
+.card-internal-grid-wrapper {
+  display: grid;
+  grid-template-columns: 159px 140px;
 }
 
-.picture:hover {
+.hotel-link-picture {
+  display: block;
+  width: 299px;
+  height: 206px;
+  border: 3px solid transparent;
+}
+
+.hotel-link-picture:hover {
   opacity: 0.6;
 }
 
-/*Не работает border в этом селекторе, я не понимаю, почему*/
-.picture:focus {
-  border: 3px solid #83B3D3;
+.hotel-link-picture:focus {
+  outline: none;
+  border-color: #83B3D3;
 }
 
-.picture:active {
+.hotel-link-picture:active {
   opacity: 0.3;
+  border-color: transparent;
 }
 
 .hotel-title {
@@ -932,12 +940,17 @@ body {
   display: inline-block;
   line-height: 23px;
   color: #333333;
-  width: 49%;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
+.rating-wrapper {
+  display: flex;
+  margin-top: 16px;
+}
+
 .rating {
+  display: inline-block;
   width: 160px;
   background-color: #F2F2F2;
   color: #333333;
@@ -949,6 +962,27 @@ body {
   border-radius: 4px;
   margin-left: auto;
 }
+
+/*Про звезды я просто забыла, ужас... Сделать только средствами повторяющегося фона не вышло - не получается средствами background
+задать интервал 7px между звездами. Сделала вот так (меняю ширину контейнера в зависимости от звезд). Так можно? Или плохо?*/
+
+.rating-stars {
+  display: inline-block;
+  width: 93px;
+  height: 18px;
+  background-image: url("../images/icons/rating-star.svg");
+  background-size: 24px 18px;
+  margin-top: 10px;
+}
+
+.three-stars {
+  width: 69px;
+}
+
+.two-stars {
+  width: 45px;
+}
+
 
 /*Пагинация*/
 
