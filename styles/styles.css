@@ -637,14 +637,21 @@ body {
   font-size: 18px;
 }
 
-.subsctibe-email-input:hover {
+.subsctibe-email-input:hover,
+.modal-form-date:hover {
   background-color: #E6E6E6;
 }
 
-.subsctibe-email-input:focus {
+.subsctibe-email-input:focus,
+.modal-form-date:focus {
   background-color: #E6E6E6;
   outline: none;
   box-shadow: inset 0 0 0 3px #83B3D3;
+}
+
+.modal-form-date:hover:active {
+  background-color: #FFFFFF;
+  box-shadow: inset 0px 0px 0px 2px #000000;
 }
 
 /*Футер*/
@@ -1265,6 +1272,7 @@ body {
   margin: auto;
   padding: 70px;
   background-color: #ffffff;
+  border-radius: 30px;
 }
 
 .modal-hotel-search {
@@ -1286,6 +1294,11 @@ body {
   background-position: center;
   cursor: pointer;
 } 
+
+.modal-close-button:active {
+  box-shadow: none;
+  opacity: 0.3;
+}
 
 .modal-title {
   margin: 0;
@@ -1310,12 +1323,32 @@ body {
   font-weight: bold;
   padding-top: 4px;
   padding-bottom: 4px;
-  margin-bottom: 40px;
 }
 
-.modal-form-field {
-  width: 420px;
+.modal-form-date {
+  width: 401px;
   padding-left: 19px;
+  background-color: #F2F2F2;
+  border: 0;
+  border-radius: 4px;
+  color: #000000;
+  background-image: url("../images/icons/calender-icon.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 17px right 19px;
+}
+
+.system-info-paragraph,
+.warning-paragraph {
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0;
+  margin: 0;
+  padding-left: 155px;
+  margin-bottom: 11px;
+}
+
+.warning-paragraph {
+  color: #FF5757;
 }
 
 .adults-children-wrapper {
@@ -1329,10 +1362,134 @@ body {
   justify-content: space-between;
 }
 
-.field-group-quantity-children {
-  padding-left: 56px;
+.children-label {
+  padding-left: 14px;
+}
+
+.children-label-icon {
+  position: relative;
+  padding-right: 43px;
 }
 
 .button-find {
   width: 575px;
+  border-radius: 10px;
+}
+
+.button-min-max-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.button-min,
+.button-max,
+.quantity-counter-span { 
+  display: block;
+  background-color: #F2F2F2;
+  width: 45px;
+}
+
+.button-min,
+.button-max {
+  border: 0;
+  height: 50px;
+}
+
+/*И здесь ломала голову больше 2х часов, так и не поняла, как добавить состояния именно плюсу и минусу... Пробовало по-разному, результат мимо*/
+
+.button-min {
+  background-image: url("../images/icons/minus-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.button-max {
+  background-image: url("../images/icons/plus-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.button-min:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.button-max:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.quantity-counter-span {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 50px; 
+  text-align: center;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+/*Tooltip*/
+
+.tooltip {
+  position: absolute;
+  margin-top: 14px;
+  margin-left: 110px;
+  width: 25px;
+  height: 25px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 4px 10px;
+  background-color: #83B3D3;
+  background-image: url("../images/icons/tooltip-icon.svg");
+  color: #FFFFFF;
+  background-repeat: no-repeat;
+}
+
+.tootltip-triangle {
+  position: absolute;
+  left: 2px;
+  bottom: -14px;
+  color: #333333;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  padding-left: 22px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  border-radius: 10px;
+  display: block;
+  width: 216px;
+  position: absolute;
+  right: -108px;
+  margin-top: 15px;
+}
+
+.tooltip-toggle:hover + .tooltip-group,
+.tooltip-toggle:focus + .tooltip-group {
+  display: block;
+}
+
+.tooltip-group {
+  display: none;
 }
