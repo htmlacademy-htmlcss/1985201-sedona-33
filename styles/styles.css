@@ -940,8 +940,8 @@ body {
 }
 
 /*проблема с состоянии на этом слайдере, вообще не понимаю, попробовала миллион вариантов с этой чертой посередине, все ломается;
-делала её через доп.спан, навешивала классы дополнительные, дивы вставляла - не получается. И класс фокус в макете какой-то жуткий - 
-абсолютно не понимаю, как его надо делать*/
+делала её через доп.спан, навешивала классы дополнительные и делала им бордеры, дивы вставляла, псевдо пробовала - не получается. 
+Минимум час 3 потратила и застряла окончательно. А еще класс фокус в макете какой-то жуткий - абсолютно не понимаю, как его надо делать*/
 
 .range-wrapper-inputs:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
@@ -1246,4 +1246,93 @@ body {
   color: #333333;
   font-size: 20px;
   text-align: center;
+}
+
+/*Модальное окно*/
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 70px;
+  background-color: #ffffff;
+}
+
+.modal-hotel-search {
+  width: 575px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+  background-image: url("../images/icons/close-cross-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+} 
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.field-group-arrival,
+.field-group-departure {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-form {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 40px;
+}
+
+.modal-form-field {
+  width: 420px;
+  padding-left: 19px;
+}
+
+.adults-children-wrapper {
+  display: flex;
+}
+
+.field-group-quantity-adults,
+.field-group-quantity-children {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.field-group-quantity-children {
+  padding-left: 56px;
+}
+
+.button-find {
+  width: 575px;
 }
