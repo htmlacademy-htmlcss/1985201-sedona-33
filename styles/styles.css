@@ -101,8 +101,8 @@ body {
   width: 160px;
   border: 0;
   line-height: 21px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .apply-button:hover {
@@ -123,7 +123,6 @@ body {
 .sedona-hotels-reset-button {
   box-sizing: border-box;
   padding: 0;
-  padding-top: 4px;
   padding-bottom: 5px;
   margin-left: 24px;
   margin-right: 24px;
@@ -813,6 +812,68 @@ body {
   padding-bottom: 13px;
 }
 
+.infrastructure-checkbox,
+.accomodation-radio {
+  position: relative;
+  display: block;
+}
+
+.infrastructure-checkbox-label,
+.accomodation-radio-label {
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  top: 1px;
+  left: 0;
+}
+
+.infrastructure-checkbox-input[type="checkbox"]:checked + .infrastructure-checkbox-mark{
+  background-image: url("../images/icons/check-mark-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.accomodation-radio-input[type="radio"]:checked + .accomodation-radio-mark::before{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+  /*width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  color: #3F5E72;
+  border: 1px solid black;
+  content: "";*/
+}
+
+.infrastructure-checkbox:hover .infrastructure-checkbox-mark,
+.accomodation-radio:hover .accomodation-radio-mark {
+  opacity: 0.6;
+}
+
+.infrastructure-checkbox-input:focus + .infrastructure-checkbox-mark,
+.accomodation-radio-input:focus + .accomodation-radio-mark {
+  outline: none;
+  box-shadow: inset 0px 0px 0 3px #83B3D3;
+  opacity: 0.6;
+}
+
+.infrastructure-checkbox-input:active + .infrastructure-checkbox-mark,
+.accomodation-radio-input:active + .accomodation-radio-mark {
+  opacity: 0.3;
+}
+
 .sedona-hotels-forms {
   display: flex;
 }
@@ -820,6 +881,7 @@ body {
 .sedona-hotels-buttons {
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
 }
 
 .sedona-hotels-buttons-form-wrapper {
@@ -829,6 +891,121 @@ body {
 .accomodation {
   margin-left: 67px;
 }
+
+.accomodation-radio-input[type="radio"] + .accomodation-radio-mark {
+  border-radius: 50%;
+}
+
+.range-scale {
+  position: relative;
+  width: 287px;
+  height: 4px;
+  top: 24px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  width: 227px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.range-toggle {
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  position: relative;
+  display: flex;
+  margin-top: 34px;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+}
+
+/*проблема с состоянии на этом слайдере, вообще не понимаю, попробовала миллион вариантов с этой чертой посередине, все ломается;
+делала её через доп.спан, навешивала классы дополнительные, дивы вставляла - не получается. И класс фокус в макете какой-то жуткий - 
+абсолютно не понимаю, как его надо делать*/
+
+.range-wrapper-inputs:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-label:focus {
+  box-shadow: 0px 0px 0px 6px #81B3D2;
+}
+
+.range-wrapper-inputs:active { 
+  background-color: #756257;
+}
+
+.catalog-filter-title {
+  line-height: 26px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.catalog-filter-label {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 11px;
+  padding-left: 17px;
+  padding-right: 17px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-filter-group {
+  border: 0;
+  padding: 0;
+  margin-left: 167px;
+}
+
+.range-input {
+  width: 50px;
+  padding: 0;
+  font: inherit;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow: inset 0px 0px 0 2px #83B3D3;
+} 
+
+.range-toggle:active {
+  box-shadow: inset 0px 0px 0 3px #83B3D3;
+} 
 
 .results-filters {
   display: flex;
@@ -843,18 +1020,30 @@ body {
   margin: 0;
 }
 
-.select-control {
-  width: 287px;
-  height: 48px;
-  -webkit-appearance: none;
-  appearance: none;
-  margin-left: 192px;
+.select {
+  padding: 13px 0;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 22px;
+  background-image: url("../images/icons/arrow-down-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.select-control {
+  width: 283px;
   padding-left: 19px;
+  margin-left: 192px;
+}
+
+.select-hotels-to-show {
+  width: 160px;
+  padding-left: 17px;
+  color: #333333;
 }
 
 .select-control:hover,
@@ -1025,17 +1214,6 @@ body {
   line-height: 23px;
   color: #333333;
   margin-right: 51px;
-}
-
-.select-hotels-to-show {
-  width: 160px;
-  height: 48px;
-  border: 2px solid #E6E6E6;
-  border-radius: 4px;
-  font-size: 18px;
-  line-height: 23px;
-  color: #333333;
-  padding-left: 17px;
 }
 
 /*Каталог, блок "Подпишитесь"*/
