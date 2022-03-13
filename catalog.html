@@ -50,7 +50,7 @@
         </nav>
       </header>
       <main class="main-container main-catalog">
-        <div class="page-container">
+        <div class=".page-container">
           <section class="sedona-hotels">
             <h1 class="main-catalog-title">Гостиницы Седоны</h1>
               <ul class="clear-list breadcrumbs">
@@ -122,13 +122,15 @@
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <div class="range">
-                  <div class="range-wrapper-inputs">
-                    <label class="catalog-filter-label">
-                       <input class="range-input" type="number" value="0" name="min-price">от
-                    </label>
-                    <label class="catalog-filter-label">
-                        <input class="range-input" type="number" value="9000" name="max-price">до
-                    </label>
+                  <div class="price-fields">
+                    <div class="price-field price-field-min">
+                      <input type="number" name="price-min" value="0" required class="price-fields-input" id="min">
+                      <label for="min">от</label>
+                    </div>
+                    <div class="price-field price-field-max">
+                      <input type="number" name="price-max" value="9000" required class="price-fields-input" id="max">
+                      <label for="max">до</label>
+                    </div>
                   </div>
                   <div class="range-scale">
                     <div class="range-bar">
@@ -174,7 +176,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/amara-resort-spa-hotel.jpg" alt="Отель Amara Resort & Spa">
+                      <img class="hotel-picture" src="images/amara-resort-spa-hotel.jpg" alt="Отель Amara Resort & Spa">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">Amara Resort & Spa</h3>
@@ -194,7 +196,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/desert-quail-inn-hotel.jpg" alt="Отель Desert Quail Inn">
+                      <img class="hotel-picture" src="images/desert-quail-inn-hotel.jpg" alt="Отель Desert Quail Inn">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">Desert Quail Inn</h3>
@@ -214,7 +216,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/villas-at-poco-diablo-hotel.jpg" alt="Отель Villas at Poco Diablo">
+                      <img class="hotel-picture" src="images/villas-at-poco-diablo-hotel.jpg" alt="Отель Villas at Poco Diablo">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">Villas at Poco Diablo</h3>
@@ -234,7 +236,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/greentree-inn-hotel.jpg" alt="Отель GreenTree Inn">
+                      <img class="hotel-picture" src="images/greentree-inn-hotel.jpg" alt="Отель GreenTree Inn">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">GreenTree Inn</h3>
@@ -261,7 +263,7 @@
                 <h2 class="visually-hidden">Пагинация</h2>
                 <ul class="clear-list pagination">
                   <li class="pagination-item">
-                    <a class="button pagination-button pagination-current-button" href="#">1</a>
+                    <a class="button pagination-button pagination-current-button">1</a>
                   </li>
                   <li class="pagination-item">
                     <a class="button button-blue pagination-button" href="#">2</a>
@@ -296,11 +298,14 @@
           <section class="subscribe-catalog">
             <div class="subscribe-wrapper-catalog">
               <h2 class="subscribe-header-catalog">Подпишитесь на рассылку</h2>
-              <p class="subscribe-description-catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
+              <p class="subscribe-description-catalog">
+                Только полезная информация и никакого спама,<br> 
+                честное бойскаутское!
+              </p>
               <div class="subscribe-form-wrapper-catalog">
                 <form class="subscribe-form" action="#" method="post">
                   <label for="subscribe-email" class="visually-hidden">Оставьте email</label>
-                  <input class="subsctibe-email-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
+                  <input class="subscribe-email-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
                   <button class="button button-blue subscribe-form-button" type="submit">Подписаться</button>
                 </form>
               </div>
