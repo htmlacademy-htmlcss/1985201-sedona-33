@@ -50,7 +50,7 @@
         </nav>
       </header>
       <main class="main-container main-catalog">
-        <div class="page-container">
+        <div class=".page-container">
           <section class="sedona-hotels">
             <h1 class="main-catalog-title">Гостиницы Седоны</h1>
               <ul class="clear-list breadcrumbs">
@@ -72,20 +72,23 @@
                 <ul class="clear-list infrastructure-list">
                   <li class="infrastructure-item">
                     <label class="infrastructure-checkbox">
-                      <input class="infrastructure-checkbox-input" type="checkbox" name="swimming-pool" checked>
-                      Бассейн
+                      <input class="visually-hidden infrastructure-checkbox-input" type="checkbox" name="swimming-pool" checked>
+                      <span class="infrastructure-checkbox-mark mark"></span>
+                      <span class="infrastructure-checkbox-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="infrastructure-item">
                     <label class="infrastructure-checkbox">
-                      <input class="infrastructure-checkbox-input" type="checkbox" name="parking" checked>
-                      Парковка
+                      <input class="visually-hidden infrastructure-checkbox-input" type="checkbox" name="parking" checked>
+                      <span class="infrastructure-checkbox-mark mark"></span>
+                      <span class="infrastructure-checkbox-label">Парковка</span>
                     </label>
                   </li>
                   <li class="infrastructure-item">
                     <label class="infrastructure-checkbox">
-                      <input class="infrastructure-checkbox-input" type="checkbox" name="wi-fi">
-                      Wi-Fi
+                      <input class="visually-hidden infrastructure-checkbox-input" type="checkbox" name="wi-fi">
+                      <span class="infrastructure-checkbox-mark mark"></span>
+                      <span class="infrastructure-checkbox-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -95,25 +98,52 @@
                 <ul class="clear-list accomodation-list">
                   <li class="accomodation-item-radio">
                     <label class="accomodation-radio">
-                      <input class="accomodation-radio-input" type="radio" name="accomodation-type" value="hotel" checked>
-                      Гостиница
+                      <input class="visually-hidden accomodation-radio-input" type="radio" name="accomodation-type" value="hotel" checked>
+                      <span class="accomodation-radio-mark mark"></span>
+                      <span class="accomodation-radio-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="accomodation-item-radio">
                     <label class="accomodation-radio">
-                      <input class="accomodation-radio-input" type="radio" name="accomodation-type" value="motel">
-                      Мотель
+                      <input class="visually-hidden accomodation-radio-input" type="radio" name="accomodation-type" value="motel">
+                      <span class="accomodation-radio-mark mark"></span>
+                      <span class="accomodation-radio-label">Мотель</span>
                     </label>
                   </li>
                   <li class="accomodation-item-radio">
                     <label class="accomodation-radio">
-                      <input class="accomodation-radio-input" type="radio" name="accomodation-type" value="apartments">
-                      Апартаменты
+                      <input class="visually-hidden accomodation-radio-input" type="radio" name="accomodation-type" value="apartments">
+                      <span class="accomodation-radio-mark mark"></span>
+                      <span class="accomodation-radio-label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <!--Тут должна быть размечена форма выбора ценового диапазона-->
+              <fieldset class="catalog-filter-group">
+                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                <div class="range">
+                  <div class="price-fields">
+                    <div class="price-field price-field-min">
+                      <input type="number" name="price-min" value="0" required class="price-fields-input" id="min">
+                      <label for="min">от</label>
+                    </div>
+                    <div class="price-field price-field-max">
+                      <input type="number" name="price-max" value="9000" required class="price-fields-input" id="max">
+                      <label for="max">до</label>
+                    </div>
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
               <form class="sedona-hotels-buttons-form-wrapper">
                 <div class="sedona-hotels-buttons">
                   <button class="button button-blue apply-button" type="submit">Применить</button>
@@ -125,7 +155,7 @@
           <div class="catalog-content-wrap">
             <section class="results-filters">
               <h2 class="hotels-found">Найдено гостиниц: 38</h2>
-              <select class="select-control" aria-label="Сортировка">
+              <select class="select select-control" aria-label="Сортировка">
                 <option value="cheap">Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
               </select>
@@ -146,7 +176,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/amara-resort-spa-hotel.jpg" alt="Отель Amara Resort & Spa">
+                      <img class="hotel-picture" src="images/amara-resort-spa-hotel.jpg" alt="Отель Amara Resort & Spa">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">Amara Resort & Spa</h3>
@@ -166,7 +196,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/desert-quail-inn-hotel.jpg" alt="Отель Desert Quail Inn">
+                      <img class="hotel-picture" src="images/desert-quail-inn-hotel.jpg" alt="Отель Desert Quail Inn">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">Desert Quail Inn</h3>
@@ -186,7 +216,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/villas-at-poco-diablo-hotel.jpg" alt="Отель Villas at Poco Diablo">
+                      <img class="hotel-picture" src="images/villas-at-poco-diablo-hotel.jpg" alt="Отель Villas at Poco Diablo">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">Villas at Poco Diablo</h3>
@@ -206,7 +236,7 @@
                 <li>
                   <div class="hotel-card">
                     <a class="hotel-link-picture" href="#">
-                      <img class="picture" src="images/greentree-inn-hotel.jpg" alt="Отель GreenTree Inn">
+                      <img class="hotel-picture" src="images/greentree-inn-hotel.jpg" alt="Отель GreenTree Inn">
                     </a>
                     <a class="hotel-link" href="#">
                       <h3 class="hotel-title">GreenTree Inn</h3>
@@ -233,7 +263,7 @@
                 <h2 class="visually-hidden">Пагинация</h2>
                 <ul class="clear-list pagination">
                   <li class="pagination-item">
-                    <a class="button pagination-button pagination-current-button" href="#">1</a>
+                    <a class="button pagination-button pagination-current-button">1</a>
                   </li>
                   <li class="pagination-item">
                     <a class="button button-blue pagination-button" href="#">2</a>
@@ -253,7 +283,7 @@
                 </ul>
                 <label class="hotels-to-show-group">
                   <span class="hotels-to-show">Гостиниц на странице:</span>
-                  <select class="select-hotels-to-show" aria-label="Количество">
+                  <select class="select select-hotels-to-show" aria-label="Количество">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -268,11 +298,14 @@
           <section class="subscribe-catalog">
             <div class="subscribe-wrapper-catalog">
               <h2 class="subscribe-header-catalog">Подпишитесь на рассылку</h2>
-              <p class="subscribe-description-catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
+              <p class="subscribe-description-catalog">
+                Только полезная информация и никакого спама,<br> 
+                честное бойскаутское!
+              </p>
               <div class="subscribe-form-wrapper-catalog">
                 <form class="subscribe-form" action="#" method="post">
                   <label for="subscribe-email" class="visually-hidden">Оставьте email</label>
-                  <input class="subsctibe-email-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
+                  <input class="subscribe-email-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
                   <button class="button button-blue subscribe-form-button" type="submit">Подписаться</button>
                 </form>
               </div>

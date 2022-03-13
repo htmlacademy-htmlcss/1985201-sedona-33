@@ -81,7 +81,7 @@
                   <li>
                     <div class="advantages-wrapper advantages-wrapper-light-blue advantages-housing">
                       <h3 class="advantages-title advantages-details-title">Жильё</h3>
-                      <p class="advantages-description">
+                      <p class="advantages-description-white">
                         Рекомендуем пожить<br> 
                         в настоящем мотеле,<br> 
                         всё как в кино!
@@ -91,7 +91,7 @@
                   <li>
                     <div class="advantages-wrapper advantages-wrapper-white advantages-food">
                       <h3 class="advantages-title advantages-details-title">Еда</h3>
-                      <p class="advantages-description">
+                      <p class="advantages-description-white">
                         Всегда заказывайте<br>
                         топовый фирменный бургер,<br> 
                         вы не разочаруетесь!
@@ -101,7 +101,7 @@
                   <li>
                     <div class="advantages-wrapper advantages-wrapper-light-blue advantages-souvenirs">
                       <h3 class="advantages-title advantages-details-title">Сувениры</h3>
-                      <p class="advantages-description">
+                      <p class="advantages-description-white">
                         Не только китайского,<br> 
                         но и настоящего местного<br>  
                         производства!
@@ -170,18 +170,23 @@
           </section>
           <section class="hotel-search">
             <h2 class="main-title main-title-interest">Заинтересовались?</h2>
-            <p class="hotel-search-parameters">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <p class="hotel-search-parameters">
+              Укажите предполагаемые даты поездки,<br> 
+              и мы покажем вам лучшие предложения гостиниц в Седоне
+            </p>
             <div class="hotel-search-button-wrapper">
-              <a class="button button-brown button-text-big hotel-search-button" href="#">Поиск гостиницы в Седоне</a>
+              <a class="button button-brown hotel-search-button" href="#">Поиск гостиницы в Седоне</a>
             </div>
           </section>
           <section class="subscribe">
             <div class="subscribe-wrapper">
               <h2 class="subscribe-header">Подпишитесь на рассылку</h2>
-              <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+              <p class="subscribe-description">
+                Только полезная информация и никакого спама,<br> 
+                честное бойскаутское!</p>
               <form class="subscribe-form" action="#" method="post">
                 <label for="subscribe-email" class="visually-hidden">Оставьте email</label>
-                <input class="subsctibe-email-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
+                <input class="subscribe-email-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
                 <button class="button button-blue subscribe-form-button" type="submit">Подписаться</button>
               </form>
             </div>
@@ -213,6 +218,62 @@
           </svg>
         </a>
       </footer>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-hotel-search">
+          <button class="modal-close-button subsctibe-email-input">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+              <form class="hotel-search-modal-form" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="field-group field-group-arrival">
+                  <label class="modal-form" for="arrival-date">Дата заезда:</label>
+                  <input class="modal-form modal-form-date" type="button" id="arrival-date" name="arrival-date" value="27 апреля 2020">
+                </div>
+                <p class="warning-paragraph">Мы не можем отправить вас в прошлое.</p>
+                <div class="field-group field-group-departure">
+                  <label class="modal-form" for="departure-date">Дата выезда:</label>
+                  <input class="modal-form modal-form-date" type="button" id="departure-date" name="departure-date" value="1 сентября 2021">
+                </div>
+                <p class="system-info-paragraph">На эти даты есть свободные номера. Пока есть.</p>
+                <div class="adults-children-wrapper">
+                  <div class="field-group counter-field-adults">
+                    <label class="modal-form" for="adults-quantity-input">Взрослые:</label>
+                    <div class="counter-field">
+                      <button class="button-min"></button>
+                      <input class= "modal-form quantity-counter-adults" type="text" id="adults-quantity-input" name="adults-quantity-input" value="2" required>
+                      <button class="button-max"></button>
+                    </div>
+                  </div>
+                  <div class="field-group counter-field-children">
+                    <label class="modal-form children-label children-label-icon" for="children-quantity-input">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                        <span class="tooltip-icon">i</span>
+                      </button>
+                      <div class="tooltip-group">
+                        <svg class="tootltip-triangle" width="19" height="9" viewBox="0 0 19 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 0 19 9H0l9.5-9Z"/></svg>
+                        <p class="tooltip-text" role="tooltip" id="tooltip-label">
+                          Укажите количество детей,<br>
+                          которые будут с вами, возраст<br> 
+                          которых от 6 до 18 лет. Дети<br>
+                          до 6 лет размещаются<br> 
+                          бесплатно.
+                        </p>
+                      </div>
+                    </span>
+                    <div class="counter-field">
+                      <button class="button-min"></button>
+                      <input class="modal-form quantity-counter-children" type="text" id="children-quantity-input" name="children-quantity-input" value="1">
+                      <button class="button-max"></button>
+                    </div>
+                  </div>
+                </div>
+                <button class="button button-blue button-find" type="submit">Найти</button>
+              </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
