@@ -1514,13 +1514,15 @@ body {
 
 .button-min:focus,
 .button-max:focus {
+  outline: none;
+  opacity: 1;
   box-shadow: 0 0 0 3px #83B3D3;
   border-radius: 4px;
 }
 
 .button-min:active,
 .button-max:active {
-  opacity: 0.3;
+  opacity: 0.2;
   box-shadow: 0 0 0 3px transparent;
 }
 
