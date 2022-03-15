@@ -62,6 +62,7 @@ input {
 .body-wrapper {
   width: 1200px;
   margin: 0 auto;
+  background-color: #fff;
   display: flex; 
   flex-direction: column; 
   flex-grow: 1;
@@ -1693,9 +1694,9 @@ input {
   text-align: center;
 }
 
-/*.modal-container-close {
+.modal-container-close {
   display: none;
-}*/
+}
 
 /* Tooltip */
 
@@ -1752,9 +1753,9 @@ input {
   margin-top: 14px;
 }
 
-/*.tooltip-group {
+.tooltip-group {
   display: none;
-}*/
+}
 
 .tooltip-toggle:hover + .tooltip-group,
 .tooltip-toggle:focus + .tooltip-group {
