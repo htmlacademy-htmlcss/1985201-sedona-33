@@ -152,6 +152,7 @@ body {
   margin-right: 24px;
   border: 0;
   font-size: 18px;
+  line-height: 23px;
   font-weight: 400;
   color: #fff;
   background-color: transparent;
@@ -226,6 +227,7 @@ body {
 .button-favorites {
   display: inline-block;
   text-decoration: none;
+  line-height: 21px;
   border: 0;
   width: 140px;
   padding-top: 9px;
@@ -444,10 +446,13 @@ body {
   -ms-grid-row-align: end;
   align-self: end;
   color: #000;
-  width: 115px;
-  padding-top: 43px;
-  padding-bottom: 44px;
-  margin-right: 72px;
+  padding-top: 18px; 
+  padding-bottom: 19px;
+  padding-left: 22px;
+  padding-right: 23px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 50px;
 }
 
 .navigation-link:hover,
@@ -458,10 +463,17 @@ body {
 }
 
 .navigation-link:focus,
-.navigation-user-link:focus,
+.navigation-user-link:focus {
+  outline: none;
+  color: #756257;
+}
+
 .footer-phone-link:focus,
 .htmlacademy-link:focus {
   outline: none;
+  -webkit-box-shadow: inset 0 0 0 3px #83b3d3;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  border-radius: 10px;
   color: #756257;
 }
 
@@ -692,7 +704,8 @@ body {
 
 .subscribe-wrapper {
   background-image: url("../images/subscribe-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
+  background-color: #83b3d3;
   height: 100%;
   background-repeat: no-repeat;
   text-align: center;
@@ -750,19 +763,19 @@ body {
 }
 
 .subscribe-email-input:hover,
-.modal-form:hover {
+.modal-form-input:hover {
   background-color: #e6e6e6;
 }
 
 .subscribe-email-input:focus,
-.modal-form:focus {
+.modal-form-input:focus {
   background-color: #e6e6e6;
   outline: none;
   -webkit-box-shadow: inset 0 0 0 3px #83b3d3;
   box-shadow: inset 0 0 0 3px #83b3d3;
 }
 
-.modal-form:active {
+.modal-form-input:active {
   background-color: #fff;
   -webkit-box-shadow: inset 0px 0px 0px 2px #000;
   box-shadow: inset 0px 0px 0px 2px #000;
@@ -777,10 +790,6 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.footer-phone {
-  margin: 0;
 }
 
 .footer-social-list {
@@ -821,8 +830,8 @@ body {
 
 .footer-social-link:focus {
   outline: none;
-  -webkit-box-shadow: inset 0 0 0 3px #68a2ca;
-  box-shadow: inset 0 0 0 3px #68a2ca;
+  -webkit-box-shadow: inset 0 0 0 3px #83b3d3;
+  box-shadow: inset 0 0 0 3px #83b3d3;
   border-radius: 10px;
   color: #68a2ca;
 }
@@ -834,11 +843,18 @@ body {
   opacity: 0.3;
 }
 
+.footer-phone {
+  margin: 0;
+  margin-right: -15px;
+}
+
 .footer-phone a {
   display: block;
-  padding-top: 40px;
   font-family: "PT Sans", Arial, sans-serif;
   line-height: 40px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 15px;
   color: #000;
   font-size: 40px;
   text-transform: uppercase;
@@ -849,8 +865,7 @@ body {
 
 .sedona-hotels {
   background-image: url("../images/sedona-hotels-background.jpg");
-  background-color: #83b3d3;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   padding-left: 70px;
@@ -861,17 +876,18 @@ body {
 
 .main-catalog-title {
   width: 528px;
-  line-height: 60px;
+  line-height: 78px;
   font-weight: 700;
   font-size: 60px;
   margin: 0;
-  padding-top: 45px;
+  padding-top: 35px;
 }
 
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: -8px;
   padding-bottom: 36px;
 }
 
@@ -893,7 +909,7 @@ body {
   padding-top: 1px;
   margin-left: 2px;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 21px;
 }
 
 .breadcrumbs-link {
@@ -1131,6 +1147,7 @@ body {
   padding: 0;
   background-color: transparent;
   font-size: 18px;
+  line-height: 23px;
   width: 86px;
   color: #fff;
   -webkit-appearance: textfield;
@@ -1240,10 +1257,11 @@ body {
   border-radius: 4px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 23px;
   background-image: url("../images/icons/arrow-down-icon.svg");
   background-repeat: no-repeat;
   background-position: right 21px center;
+  background-color: #fff;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1559,7 +1577,7 @@ body {
   border: 0;
   border-radius: 4px;
   color: #000;
-  font-size: 17px;
+  font-size: 18px;
   background-image: url("../images/icons/calender-icon.svg");
   background-repeat: no-repeat;
   background-position: bottom 17px right 19px;
@@ -1601,13 +1619,9 @@ body {
   justify-content: space-between;
 }
 
-.children-label {
-  padding-left: 50px;
-}
-
 .children-label-icon {
   position: relative;
-  padding: 0;
+  padding-top: -2px;
   padding-left: 56px;
 }
 
@@ -1713,13 +1727,14 @@ body {
   background-color: transparent;
   padding: 0;
   margin: 0;
+  margin-left: -3px;
   display: block;
 }
 
 .tooltip-icon {
   display: inline-block;
   border-radius: 50%;
-  padding: 4px 10px;
+  padding: 4px 11px;
   background-color: #83b3d3;
   background-image: url("../images/icons/tooltip-icon.svg");
   color: #fff;
@@ -1728,8 +1743,7 @@ body {
 
 .tootltip-triangle {
   position: absolute;
-  left: 2px;
-  bottom: -14px;
+  bottom: -16px;
   color: #333;
 }
 
@@ -1749,8 +1763,8 @@ body {
   display: block;
   width: 216px;
   position: absolute;
-  right: -114px;
-  margin-top: 14px;
+  right: -112px;
+  margin-top: 16px;
 }
 
 .tooltip-group {
