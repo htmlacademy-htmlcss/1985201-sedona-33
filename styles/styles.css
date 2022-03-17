@@ -1570,7 +1570,7 @@ body {
 }
 
 .modal-form-date {
-  width: 420px;
+  width: 400px;
   padding: 0;
   padding-left: 21px;
   background-color: #f2f2f2;
@@ -1621,7 +1621,6 @@ body {
 
 .children-label-icon {
   position: relative;
-  padding-top: -2px;
   padding-left: 56px;
 }
 
@@ -1761,10 +1760,10 @@ body {
   padding-bottom: 22px;
   border-radius: 10px;
   display: block;
-  width: 216px;
+  width: 217px;
   position: absolute;
-  right: -112px;
-  margin-top: 16px;
+  right: -114px;
+  margin-top: 17px;
 }
 
 .tooltip-group {
